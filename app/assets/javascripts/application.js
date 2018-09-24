@@ -18,3 +18,735 @@
 //= require popper
 //= require bootstrap
 
+console.log("Rails");
+
+
+
+let soundObject = {
+	pad1: { sound: "/drumSamplesFolder/MetroHat1.wav", key: 49 },
+	pad2: { sound: "/drumSamplesFolder/rimshot1.wav", key: 50 },
+	pad3: { sound: "/drumSamplesFolder/808-3.wav", key: 51 },
+	pad4: { sound: "/drumSamplesFolder/808-4.wav", key: 52 },
+	pad5: { sound: "/drumSamplesFolder/808-5.wav", key: 81 },
+	pad6: { sound: "/drumSamplesFolder/clap1.wav", key: 87 },
+	pad7: { sound: "/drumSamplesFolder/clap2.wav", key: 69 },
+	pad8: { sound: "/drumSamplesFolder/clap3.wav", key: 82 },
+	pad9: { sound: "/drumSamplesFolder/clap4.wav", key: 65 },
+	pad10: { sound: "/drumSamplesFolder/crash1.wav", key: 83 },
+	pad11: { sound: "/drumSamplesFolder/hat1.wav", key: 68 },
+	pad12: { sound: "/drumSamplesFolder/hat2.wav", key: 70 },
+	pad13: { sound: "/drumSamplesFolder/hat3.wav", key: 90 },
+	pad14: { sound: "/drumSamplesFolder/hat4.wav", key: 88 },
+	pad15: { sound: "/drumSamplesFolder/kick1.wav", key: 67 },
+	pad16: { sound: "/drumSamplesFolder/kick2.wav", key: 86 }
+};
+
+let kit1 = {
+	pad1: { sound: "/drumSamplesFolder/MetroHat1.wav", key: 49 },
+	pad2: { sound: "/drumSamplesFolder/rimshot1.wav", key: 50 },
+	pad3: { sound: "/drumSamplesFolder/808-3.wav", key: 51 },
+	pad4: { sound: "/drumSamplesFolder/808-4.wav", key: 52 },
+	pad5: { sound: "/drumSamplesFolder/808-5.wav", key: 81 },
+	pad6: { sound: "/drumSamplesFolder/clap1.wav", key: 87 },
+	pad7: { sound: "/drumSamplesFolder/clap2.wav", key: 69 },
+	pad8: { sound: "/drumSamplesFolder/clap3.wav", key: 82 },
+	pad9: { sound: "/drumSamplesFolder/clap4.wav", key: 65 },
+	pad10: { sound: "/drumSamplesFolder/crash1.wav", key: 83 },
+	pad11: { sound: "/drumSamplesFolder/hat1.wav", key: 68 },
+	pad12: { sound: "/drumSamplesFolder/hat2.wav", key: 70 },
+	pad13: { sound: "/drumSamplesFolder/hat3.wav", key: 90 },
+	pad14: { sound: "/drumSamplesFolder/hat4.wav", key: 88 },
+	pad15: { sound: "/drumSamplesFolder/kick1.wav", key: 67 },
+	pad16: { sound: "/drumSamplesFolder/kick2.wav", key: 86 }
+};
+
+let kit2 = {
+	pad1: { sound: "/drumSamplesFolder/triangle1.wav", key: 49 },
+	pad2: { sound: "/drumSamplesFolder/rimshot1.wav", key: 50 },
+	pad3: { sound: "/drumSamplesFolder/808-3.wav", key: 51 },
+	pad4: { sound: "/drumSamplesFolder/808-4.wav", key: 52 },
+	pad5: { sound: "/drumSamplesFolder/808-5.wav", key: 81 },
+	pad6: { sound: "/drumSamplesFolder/clap1.wav", key: 87 },
+	pad7: { sound: "/drumSamplesFolder/clap2.wav", key: 69 },
+	pad8: { sound: "/drumSamplesFolder/clap3.wav", key: 82 },
+	pad9: { sound: "/drumSamplesFolder/clap4.wav", key: 65 },
+	pad10: { sound: "/drumSamplesFolder/crash1.wav", key: 83 },
+	pad11: { sound: "/drumSamplesFolder/hat1.wav", key: 68 },
+	pad12: { sound: "/drumSamplesFolder/hat2.wav", key: 70 },
+	pad13: { sound: "/drumSamplesFolder/hat3.wav", key: 90 },
+	pad14: { sound: "/drumSamplesFolder/hat4.wav", key: 88 },
+	pad15: { sound: "/drumSamplesFolder/kick1.wav", key: 67 },
+	pad16: { sound: "/drumSamplesFolder/kick2.wav", key: 86 }
+};
+
+let kit2Sounds = {
+	pad1: "/drumSamplesFolder/triangle1.wav",
+	pad2: "/drumSamplesFolder/rimshot1.wav",
+	pad3: "/drumSamplesFolder/808-3.wav",
+	pad4: "/drumSamplesFolder/808-4.wav",
+	pad5: "/drumSamplesFolder/808-5.wav",
+	pad6: "/drumSamplesFolder/clap1.wav",
+	pad7: "/drumSamplesFolder/clap2.wav",
+	pad8: "/drumSamplesFolder/clap3.wav",
+	pad9: "/drumSamplesFolder/clap4.wav",
+	pad10: "/drumSamplesFolder/crash1.wav",
+	pad11: "/drumSamplesFolder/hat1.wav",
+	pad12: "/drumSamplesFolder/hat2.wav",
+	pad13: "/drumSamplesFolder/hat3.wav",
+	pad14: "/drumSamplesFolder/hat4.wav",
+	pad15: "/drumSamplesFolder/kick1.wav",
+	pad16: "/drumSamplesFolder/kick2.wav"
+};
+
+let snareJordanKit = {
+	pad1: { sound: "/snareJordanKit/clap air.wav", key: 49 },
+	pad2: { sound: "/snareJordanKit/clap clean.wav", key: 50 },
+	pad3: { sound: "/snareJordanKit/clap clean.wav", key: 51 },
+	pad4: { sound: "/snareJordanKit/clap clean.wav", key: 52 },
+	pad5: { sound: "/snareJordanKit/clap clean.wav", key: 81 },
+	pad6: { sound: "/snareJordanKit/clap clean.wav", key: 87 },
+	pad7: { sound: "/snareJordanKit/clap_clean.wav", key: 69 },
+	pad8: { sound: "/snareJordanKit/clap_clean.wav", key: 82 },
+	pad9: { sound: "/snareJordanKit/clap_clean.wav", key: 65 },
+	pad10: { sound: "/snareJordanKit/clap_clean.wav", key: 83 },
+	pad11: { sound: "/snareJordanKit/clap_clean.wav", key: 68 },
+	pad12: { sound: "/snareJordanKit/clap_clean.wav", key: 70 },
+	pad13: { sound: "/snareJordanKit/clap_clean.wav", key: 90 },
+	pad14: { sound: "/snareJordanKit/clap_clean.wav", key: 88 },
+	pad15: { sound: "/snareJordanKit/clap_clean.wav", key: 67 },
+	pad16: { sound: "/snareJordanKit/clap_clean.wav", key: 86 }
+};
+
+let allKits = [kit1, kit2, snareJordanKit];
+
+let changeKitCounter = 1;
+
+function changeKits() {
+	if (changeKitCounter === 0) {
+		soundObject = allKits[changeKitCounter];
+		changeKitCounter++
+		console.log(changeKitCounter)
+	}
+	else {
+		soundObject = allKits[changeKitCounter];
+		changeKitCounter++;
+		console.log(changeKitCounter)
+	}
+	if (changeKitCounter === allKits.length) {
+		changeKitCounter = 0;
+		console.log(changeKitCounter)
+	}
+}
+
+function previousKits() {
+	if (changeKitCounter === 0) {
+		soundObject = allKits[changeKitCounter];
+		changeKitCounter = allKits.length - 1
+
+		console.log(changeKitCounter)
+	} else {
+		soundObject = allKits[changeKitCounter];
+		changeKitCounter--;
+		console.log(changeKitCounter)
+	}
+
+	if (changeKitCounter === allKits.length) {
+		changeKitCounter--
+		console.log(changeKitCounter)
+	}
+}
+
+previousKit = document.getElementById("previousKit");
+changeKit = document.getElementById("changeKit");
+
+changeKit.addEventListener("click", function (event) {
+	changeKits();
+});
+
+previousKit.addEventListener("click", function (event) {
+	previousKits();
+});
+
+let mappedPad = "";
+let mappedKey = "";
+let keyAssign = document.getElementById("keyAssign");
+let beatRepeatBtn = document.getElementById("beatRepeat");
+let switcher = "off";
+let noteRepeatSwitcher = "off";
+let hiddenButton = document.getElementsByClassName("hiddenButton");
+var pads = document.getElementsByClassName("pads");
+
+keyAssign.addEventListener("click", keyToggle);
+
+let tempoForm = document.getElementById("set-tempo");
+
+tempoForm.onkeypress = function(e) {
+	var key = e.charCode || e.keyCode || 0;     
+	if (key == 13) {
+	  e.preventDefault();
+	}
+  }
+
+function displayKeyMappings() {
+	hiddenButton[0].innerText = String.fromCharCode(soundObject.pad1.key)
+	hiddenButton[1].innerText = String.fromCharCode(soundObject.pad2.key)
+	hiddenButton[2].innerText = String.fromCharCode(soundObject.pad3.key)
+	hiddenButton[3].innerText = String.fromCharCode(soundObject.pad4.key)
+	hiddenButton[4].innerText = String.fromCharCode(soundObject.pad5.key)
+	hiddenButton[5].innerText = String.fromCharCode(soundObject.pad6.key)
+	hiddenButton[6].innerText = String.fromCharCode(soundObject.pad7.key)
+	hiddenButton[7].innerText = String.fromCharCode(soundObject.pad8.key)
+	hiddenButton[8].innerText = String.fromCharCode(soundObject.pad9.key)
+	hiddenButton[9].innerText = String.fromCharCode(soundObject.pad10.key)
+	hiddenButton[10].innerText = String.fromCharCode(soundObject.pad11.key)
+	hiddenButton[11].innerText = String.fromCharCode(soundObject.pad12.key)
+	hiddenButton[12].innerText = String.fromCharCode(soundObject.pad13.key)
+	hiddenButton[13].innerText = String.fromCharCode(soundObject.pad14.key)
+	hiddenButton[14].innerText = String.fromCharCode(soundObject.pad15.key)
+	hiddenButton[15].innerText = String.fromCharCode(soundObject.pad16.key)
+}
+displayKeyMappings();
+function keyBind() {
+	if ((switcher === "on")) {
+		let mapKeyCounter = 0;
+		let mappedPad = this.id;
+		window.addEventListener("keydown", function (event) {
+			event.preventDefault;
+			if (mapKeyCounter < 1) {
+				mappedKey = event.keyCode;
+				soundObject[mappedPad].key = mappedKey;
+				mapKeyCounter++;
+			}
+			displayKeyMappings()
+		})
+	}
+};
+
+function beatRepeatToggle() {
+	console.log("Beat Repeat button Works");
+	if (noteRepeatSwitcher === "on") {
+		beatRepeatBtn.style.backgroundColor = "black";
+		beatRepeatBtn.innerText = "Beat Repeat Off";
+		beatRepeatBtn.style.color = "white";
+		noteRepeatSwitcher = "off";
+
+		console.log("Note Repeat Switcher is on")
+
+		if (counterObj.newPadCounter1>0) {
+			bufferNode1.stop(context.currentTime);
+			counterObj.newPadCounter1 = 0;	
+		}
+		if (counterObj.newPadCounter2>0) {
+			bufferNode2.stop(context.currentTime);
+			counterObj.newPadCounter2 = 0;	
+		}
+		if (counterObj.newPadCounter3>0) {
+			bufferNode3.stop(context.currentTime);
+			counterObj.newPadCounter3 = 0;	
+		}
+		if (counterObj.newPadCounter4>0) {
+			bufferNode4.stop(context.currentTime);
+			counterObj.newPadCounter4 = 0;	
+		}
+		if (counterObj.newPadCounter5>0) {
+			bufferNode5.stop(context.currentTime);
+			counterObj.newPadCounter5 = 0;	
+		}
+		if (counterObj.newPadCounter6>0) {
+			bufferNode6.stop(context.currentTime);
+			counterObj.newPadCounter6 = 0;	
+		}
+		if (counterObj.newPadCounter7>0) {
+			bufferNode7.stop(context.currentTime);
+			counterObj.newPadCounter7 = 0;	
+		}
+		if (counterObj.newPadCounter8>0) {
+			bufferNode8.stop(context.currentTime);
+			counterObj.newPadCounter8 = 0;	
+		}
+		if (counterObj.newPadCounter9>0) {
+			bufferNode9.stop(context.currentTime);
+			counterObj.newPadCounter9 = 0;	
+		}
+		if (counterObj.newPadCounter10>0) {
+			bufferNode10.stop(context.currentTime);
+			counterObj.newPadCounter10 = 0;	
+		}
+		if (counterObj.newPadCounter11>0) {
+			bufferNode11.stop(context.currentTime);
+			counterObj.newPadCounter11 = 0;	
+		}
+		if (counterObj.newPadCounter12>0) {
+			bufferNode12.stop(context.currentTime);
+			counterObj.newPadCounter12 = 0;	
+		}
+		if (counterObj.newPadCounter13>0) {
+			bufferNode13.stop(context.currentTime);
+			counterObj.newPadCounter13 = 0;	
+		}
+		if (counterObj.newPadCounter14>0) {
+			bufferNode14.stop(context.currentTime);
+			counterObj.newPadCounter14 = 0;	
+		}
+		if (counterObj.newPadCounter15>0) {
+			bufferNode15.stop(context.currentTime);
+			counterObj.newPadCounter15 = 0;	
+		}
+		if (counterObj.newPadCounter16>0) {
+			bufferNode16.stop(context.currentTime);
+			counterObj.newPadCounter16 = 0;	
+		}
+		
+	} else {
+		beatRepeatBtn.style.backgroundColor = "yellow";
+		beatRepeatBtn.innerText = "Beat Repeat On";
+		beatRepeatBtn.style.color = "black";
+		noteRepeatSwitcher = "on";
+	}
+}
+
+beatRepeatBtn.addEventListener("click", beatRepeatToggle);
+
+function keyToggle() {
+	if (switcher === "on") {
+		keyAssign.style.backgroundColor = "black";
+		keyAssign.innerText = "Key Assign Off";
+		keyAssign.style.color = "white";
+
+		for (let x = 0; x < hiddenButton.length; x++) {
+
+			hiddenButton[x].style.display = "none"
+		}
+		switcher = "off";
+	} else {
+		keyAssign.style.backgroundColor = "yellow";
+		keyAssign.innerText = "Key Assign On";
+		keyAssign.style.color = "black";
+		for (let x = 0; x < hiddenButton.length; x++) {
+			hiddenButton[x].style.display = "inline"
+		}
+
+		for (var i = 0; i < pads.length; i++) {
+			pads[i].addEventListener("click", keyBind)
+		}
+		switcher = "on";
+	}
+}
+
+function addBackground(padNumber) {
+	if (switcher === "off") {
+		window[padNumber].classList.add("backgroundBlack")
+	}
+}
+
+function removeBackground(padNumber) {
+	if (switcher === "off") {
+		window[padNumber].classList.remove("backgroundBlack")
+	}
+}
+
+function removeBackgroundPreviousKit() {
+
+	previousKit.classList.remove("backgroundBlack")
+	
+}
+
+function addBackgroundPreviousKit() {
+	
+		previousKit.classList.add("backgroundBlack");
+
+		setTimeout(removeBackgroundPreviousKit, 3);
+	
+}
+
+function removeBackgroundNextKit() {
+
+	changeKit.classList.remove("backgroundBlack")
+	
+}
+
+function addBackgroundNextKit() {
+	
+		changeKit.classList.add("backgroundBlack");
+
+		setTimeout(removeBackgroundNextKit, 3);
+	
+}
+
+previousKit.addEventListener("click", addBackgroundPreviousKit);
+changeKit.addEventListener("click", addBackgroundNextKit);
+
+
+
+// function addBackgroundChangeKit(padNumber) {
+// 	if (switcher === "off") {
+// 		window[padNumber].classList.add("backgroundBlack")
+// 	}
+// }
+
+// function removeBackground(padNumber) {
+// 	if (switcher === "off") {
+// 		window[padNumber].classList.remove("backgroundBlack")
+// 	}
+// }
+
+
+
+function repeatPadEqualsZero(padNumber) {
+	window['repeatPad'+padNumber] = 0
+}
+
+for(var i=1; i<=16; i++) {
+		window['repeatPad'+i] = 0;
+	}
+
+let counterObj = {	
+};
+
+for(var i=1; i<=16; i++) {
+	counterObj['newPadCounter'+i] = 0;
+}
+let counter;
+
+var context = new window.AudioContext;
+
+document.addEventListener("DOMContentLoaded", function () {
+
+	 
+	console.log(context);
+	var gainNode = context.createGain();
+	function beatRepeat() {
+		tempo2 = document.getElementById("set-tempo").value;
+		console.log(document.getElementById("set-tempo").value);
+		// noteDivision2 = document.getElementById("set-noteDivision").value;
+		noteDivision2 = 8;
+		// console.log(document.getElementById("set-noteDivision").value);
+		let interval = 1 / ((tempo2 / 60) * noteDivision2 / 4)
+		return interval
+	}
+
+	function playSound1(nameBufferNode, soundFile, interval) {
+		window[nameBufferNode] = context.createBufferSource();
+		var request = new XMLHttpRequest();
+		request.open('GET', soundFile, true);
+		request.responseType = 'arraybuffer';
+		request.onload = function () {
+			context.decodeAudioData(
+				request.response,
+				function (buffer) {
+					window[nameBufferNode].buffer = buffer;
+					window[nameBufferNode].connect(gainNode);
+
+					if (noteRepeatSwitcher==="on") {
+						window[nameBufferNode].loop = true;
+						console.log(interval);
+						console.log(buffer.duration);
+						window[nameBufferNode].loopEnd = interval;
+					}
+					
+					gainNode.connect(context.destination);
+					gainNode.gain.setValueAtTime(1, context.currentTime);
+				},
+				function (e) { console.log("Error with decoding audio data" + e.err); }
+			);
+		};
+		request.send()
+		window[nameBufferNode].start()
+	};
+
+	function stopSound1(nameBufferNode) {
+		window[nameBufferNode].stop(context.currentTime);
+	}; 
+
+	for(let i=1; i<17; i++) {
+		document.getElementById(`pad${i}`).addEventListener('click', function () { playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`) }, true);
+	}
+
+	let setTempo = document.getElementById("set-tempo");
+
+	function keyzDown(event) {
+
+		event.preventDefault();
+
+		if (event.keyCode != 8) {
+			if ((event.keyCode === soundObject.pad1.key) && (repeatPad1 < 1) && switcher === "off") {
+				playAndStop1('bufferNode1', soundObject.pad1.sound, 'pad1')
+				repeatPad1++
+			}
+			if (event.keyCode === soundObject.pad2.key && (repeatPad2 < 1) && switcher === "off") {
+				playAndStop1('bufferNode2', soundObject.pad2.sound, 'pad2')
+				repeatPad2++
+			}
+			if (event.keyCode === soundObject.pad3.key && (repeatPad3 < 1) && switcher === "off") {
+				playAndStop1('bufferNode3', soundObject.pad3.sound, 'pad3')
+				repeatPad3++
+			}
+			if (event.keyCode === soundObject.pad4.key && (repeatPad4 < 1) && switcher === "off") {
+				playAndStop1('bufferNode4', soundObject.pad4.sound, 'pad4')
+				repeatPad4++
+			}
+			if (event.keyCode === soundObject.pad5.key && (repeatPad5 < 1) && switcher === "off") {
+				playAndStop1('bufferNode5', soundObject.pad5.sound, 'pad5')
+				repeatPad5++
+			}
+			if (event.keyCode === soundObject.pad6.key && (repeatPad6 < 1) && switcher === "off") {
+				playAndStop1('bufferNode6', soundObject.pad6.sound, 'pad6')
+				repeatPad6++
+			}
+			if (event.keyCode === soundObject.pad7.key && (repeatPad7 < 1) && switcher === "off") {
+				playAndStop1('bufferNode7', soundObject.pad7.sound, 'pad7')
+				repeatPad7++
+			}
+			if (event.keyCode === soundObject.pad8.key && (repeatPad8 < 1) && switcher === "off") {
+				playAndStop1('bufferNode8', soundObject.pad8.sound, 'pad8')
+				repeatPad8++
+			}
+			if (event.keyCode === soundObject.pad9.key && (repeatPad9 < 1) && switcher === "off") {
+				playAndStop1('bufferNode9', soundObject.pad9.sound, 'pad9')
+				repeatPad9++
+			}
+			if (event.keyCode === soundObject.pad10.key && (repeatPad10 < 1) && switcher === "off") {
+				playAndStop1('bufferNode10', soundObject.pad10.sound, 'pad10')
+				repeatPad10++
+			}
+			if (event.keyCode === soundObject.pad11.key && (repeatPad11 < 1) && switcher === "off") {
+				playAndStop1('bufferNode11', soundObject.pad11.sound, 'pad11')
+				repeatPad11++
+			}
+			if (event.keyCode === soundObject.pad12.key && (repeatPad12 < 1) && switcher === "off") {
+				playAndStop1('bufferNode12', soundObject.pad12.sound, 'pad12')
+				repeatPad12++
+			}
+			if (event.keyCode === soundObject.pad13.key && (repeatPad13 < 1) && switcher === "off") {
+				playAndStop1('bufferNode13', soundObject.pad13.sound, 'pad13')
+				repeatPad13++
+			}
+			if (event.keyCode === soundObject.pad14.key && (repeatPad14 < 1) && switcher === "off") {
+				playAndStop1('bufferNode14', soundObject.pad14.sound, 'pad14')
+				repeatPad14++
+			}
+			if (event.keyCode === soundObject.pad15.key && (repeatPad15 < 1) && switcher === "off") {
+				playAndStop1('bufferNode15', soundObject.pad15.sound, 'pad15')
+				repeatPad15++
+			}
+			if (event.keyCode === soundObject.pad16.key && (repeatPad16 < 1) && switcher === "off") {
+				playAndStop1('bufferNode16', soundObject.pad16.sound, 'pad16')
+				repeatPad16++
+			}
+
+		}
+	}
+
+	window.addEventListener("keydown", keyzDown);
+
+	window.addEventListener("keyup", function (event) {
+		event.preventDefault();
+		if (event.keyCode === soundObject.pad1.key && (switcher === "off")) {
+			repeatPadEqualsZero(1);
+
+			if (noteRepeatSwitcher === "on") {
+				bufferNode1.stop(context.currentTime);
+			}
+		}
+
+		if (event.keyCode === soundObject.pad2.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode2.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(2);
+		}
+		if (event.keyCode === soundObject.pad3.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode3.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(3);
+		}
+
+		if (event.keyCode === soundObject.pad4.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode4.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(4);
+		}
+		if (event.keyCode === soundObject.pad5.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode5.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(5);
+		}
+
+		if (event.keyCode === soundObject.pad6.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode6.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(6);
+		}
+		if (event.keyCode === soundObject.pad7.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode7.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(7);
+		}
+
+		if (event.keyCode === soundObject.pad8.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode8.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(8);
+		}
+		if (event.keyCode === soundObject.pad9.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode9.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(9);
+		}
+
+		if (event.keyCode === soundObject.pad10.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode10.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(10);
+		}
+		if (event.keyCode === soundObject.pad11.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode11.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(11);
+		}
+
+		if (event.keyCode === soundObject.pad12.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode12.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(12);
+		}
+		if (event.keyCode === soundObject.pad13.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode13.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(13);
+		}
+
+		if (event.keyCode === soundObject.pad14.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode14.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(14);
+		}
+		if (event.keyCode === soundObject.pad15.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode15.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(15);
+		}
+
+		if (event.keyCode === soundObject.pad16.key && (switcher === "off")) {
+			if (noteRepeatSwitcher === "on") {
+				bufferNode16.stop(context.currentTime);
+			}
+			repeatPadEqualsZero(16);
+		}
+	})
+
+	setTempo.addEventListener("focus", function (event) {
+		window.removeEventListener("keydown", keyzDown);
+	});
+	setTempo.addEventListener("blur", function (event) {
+		window.addEventListener("keydown", keyzDown);
+	});
+
+	function playAndStop1(bufferNodeName, soundFile, pad) {
+		let interval = beatRepeat();
+
+		if (switcher === "off") {
+			if (bufferNodeName === 'bufferNode1') {
+				counter = counterObj.newPadCounter1
+				counterObj.newPadCounter1 = counterObj.newPadCounter1 + 1
+			}
+			if (bufferNodeName === 'bufferNode2') {
+				counter = counterObj.newPadCounter2
+				counterObj.newPadCounter2 = counterObj.newPadCounter2 + 1
+			}
+			if (bufferNodeName === 'bufferNode3') {
+				counter = counterObj.newPadCounter3
+				counterObj.newPadCounter3 = counterObj.newPadCounter3 + 1
+			}
+			if (bufferNodeName === 'bufferNode4') {
+				counter = counterObj.newPadCounter4
+				counterObj.newPadCounter4 = counterObj.newPadCounter4 + 1
+			}
+			if (bufferNodeName === 'bufferNode5') {
+				counter = counterObj.newPadCounter5
+				counterObj.newPadCounter5 = counterObj.newPadCounter5 + 1
+			}
+			if (bufferNodeName === 'bufferNode6') {
+				counter = counterObj.newPadCounter6
+				counterObj.newPadCounter6 = counterObj.newPadCounter6 + 1
+			}
+			if (bufferNodeName === 'bufferNode7') {
+				counter = counterObj.newPadCounter7
+				counterObj.newPadCounter7 = counterObj.newPadCounter7 + 1
+			}
+			if (bufferNodeName === 'bufferNode8') {
+				counter = counterObj.newPadCounter8
+				counterObj.newPadCounter8 = counterObj.newPadCounter8 + 1
+			}
+			if (bufferNodeName === 'bufferNode9') {
+				counter = counterObj.newPadCounter9
+				counterObj.newPadCounter9 = counterObj.newPadCounter9 + 1
+			}
+			if (bufferNodeName === 'bufferNode10') {
+				counter = counterObj.newPadCounter10
+				counterObj.newPadCounter10 = counterObj.newPadCounter10 + 1
+
+			}
+			if (bufferNodeName === 'bufferNode11') {
+				counter = counterObj.newPadCounter11
+				counterObj.newPadCounter11 = counterObj.newPadCounter11 + 1
+			}
+			if (bufferNodeName === 'bufferNode12') {
+				counter = counterObj.newPadCounter12
+				counterObj.newPadCounter12 = counterObj.newPadCounter12 + 1
+
+			}
+			if (bufferNodeName === 'bufferNode13') {
+				counter = counterObj.newPadCounter13
+				counterObj.newPadCounter13 = counterObj.newPadCounter13 + 1
+			}
+			if (bufferNodeName === 'bufferNode14') {
+				counter = counterObj.newPadCounter14
+				counterObj.newPadCounter14 = counterObj.newPadCounter14 + 1
+			}
+			if (bufferNodeName === 'bufferNode15') {
+				counter = counterObj.newPadCounter15
+				counterObj.newPadCounter15 = counterObj.newPadCounter15 + 1
+
+			}
+			if (bufferNodeName === 'bufferNode16') {
+				counter = counterObj.newPadCounter16
+				counterObj.newPadCounter16 = counterObj.newPadCounter16 + 1
+			}
+
+
+
+			if (counter === 0 || noteRepeatSwitcher === "on") {
+				playSound1(bufferNodeName, soundFile, interval);
+				addBackground(pad);
+				setTimeout(removeBackground, 3, pad);
+
+			}
+			else {
+				stopSound1(bufferNodeName);
+				playSound1(bufferNodeName, soundFile, interval);
+				addBackground(pad);
+				setTimeout(removeBackground, 3, pad);
+
+			}
+		}
+	};
+
+});
+
+
+
+
