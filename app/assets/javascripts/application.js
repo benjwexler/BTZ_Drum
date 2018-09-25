@@ -20,6 +20,81 @@
 
 console.log("Rails");
 
+let quarterNote = document.getElementById("quarterNote");
+let eigthNote = document.getElementById("eigthNote");
+let sixteenthNote = document.getElementById("sixteenthNote");
+let thirtySecondNote = document.getElementById("thirtySecondNote");
+let noteRepeatButtons = document.getElementsByClassName("noteRepeatDivision");
+
+let tempoArr = [];
+
+// document.getElementById("set-noteDivision").value = 8;
+
+// let tempoVal = document.getElementById("set-noteDivision").value;
+let tempoVal = 8;
+
+
+
+function setNoteDivision() {
+
+	
+
+	switch (this.id) {
+		case 'quarterNote':
+		quarterNote.style.background = "yellow";
+		eigthNote.style.background = "black";
+		sixteenthNote.style.background = "background";
+		thirtySecondNote.style.background = "black";
+		tempoVal = 4
+		console.log(this.id);
+		console.log(tempoVal);
+		tempoArr
+
+		break;
+		case 'eigthNote':
+		quarterNote.style.background = "background";
+		eigthNote.style.background = "yellow";
+		sixteenthNote.style.background = "background";
+		thirtySecondNote.style.background = "background";
+		tempoVal = 8;
+		console.log(this.id);
+		console.log(tempoVal);
+		break;	
+		case 'sixteenthNote':
+		sixteenthNote.style.background = "yellow";
+		eigthNote.style.background = "white";
+		sixteenthNote.style.background = "white";
+		thirtySecondNote.style.background = "white";
+		tempoVal = 16;
+		console.log(this.id);
+		console.log(tempoVal);
+		break;	
+		case 'thirtySecondNote':
+		thirtySecondNote.style.background = "yellow";
+		eigthNote.style.background = "white";
+		sixteenthNote.style.background = "white";
+		thirtySecondNote.style.background = "white";
+		tempoVal = 32;
+		console.log(this.id);
+		console.log(tempoVal);
+		break;
+	}
+}
+
+
+
+for (var i = 0; i < noteRepeatButtons.length; i++) {
+	noteRepeatButtons[i].addEventListener("click", setNoteDivision)
+}
+
+
+
+
+
+// quarterNote.addEventListener("click", function (event) {
+// 	console.log(this.id);
+// });
+
 
 
 let soundObject = {
@@ -419,7 +494,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		tempo2 = document.getElementById("set-tempo").value;
 		console.log(document.getElementById("set-tempo").value);
 		// noteDivision2 = document.getElementById("set-noteDivision").value;
-		noteDivision2 = 8;
+
+		noteDivision2 = tempoVal;
 		// console.log(document.getElementById("set-noteDivision").value);
 		let interval = 1 / ((tempo2 / 60) * noteDivision2 / 4)
 		return interval
