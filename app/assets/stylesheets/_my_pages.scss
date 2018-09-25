@@ -73,7 +73,16 @@ background: linear-gradient(to bottom right, black 77%, #00d7d7 78%)
     font-size: 13px;
     border: 2px solid black;
 }
-#keyToggle3 {
+#quarterNote {
+    height: 50%;
+    width: 20%;
+    margin: auto;
+    color: white;
+    font-size: 13px;
+    border: 2px solid black;
+    // background: background;
+}
+#eigthNote {
     height: 50%;
     width: 20%;
     margin: auto;
@@ -81,23 +90,16 @@ background: linear-gradient(to bottom right, black 77%, #00d7d7 78%)
     font-size: 13px;
     border: 2px solid black;
 }
-#keyToggle4 {
+#sixteenthNote {
     height: 50%;
     width: 20%;
     margin: auto;
     color: white;
     font-size: 13px;
     border: 2px solid black;
+    // background: background;
 }
-#keyToggle5 {
-    height: 50%;
-    width: 20%;
-    margin: auto;
-    color: white;
-    font-size: 13px;
-    border: 2px solid black;
-}
-#keyToggle6 {
+#thirtySecondNote {
     height: 50%;
     width: 20%;
     margin: auto;
