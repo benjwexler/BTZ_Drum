@@ -160,13 +160,15 @@ background: linear-gradient(to bottom right, black 77%, #00d7d7 78%)
     transform: rotate(.1deg);
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 576px) {
     #mainContainer {
-        margin-top: 1vh;
+        margin-top: 10vh;
         
     }
     #mainLeft {
-        height: 80vh;
+        height: 60vh;
+        margin-top: 8%;
+        border: 0px;
     }
 }
 
@@ -203,6 +205,13 @@ background: linear-gradient(to bottom right, black 77%, #00d7d7 78%)
     opacity: .8;
     filter: blur(.7px);
 
+}
+
+@media only screen and (max-width: 800px) {
+    #topSectionMiddle{
+        font-size: 20px;
+        padding-top: 13px;
+    }
 }
 
 // #artistName {
@@ -257,7 +266,7 @@ background: linear-gradient(to bottom right, black 77%, #00d7d7 78%)
     text-align: center;
     border-radius: 10%;
     margin-top: 10px;
-    border: 5px solid rgb(176, 201, 39);
+  
     border: 5px solid black;
     // background: rgb(109, 168, 179);
     // background: rgb(11, 12, 12);
