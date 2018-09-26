@@ -122,7 +122,7 @@ let kit1 = {
 	pad1: { sound: "/drumSamplesFolder/MetroHat1.wav", key: 49 },
 	pad2: { sound: "/drumSamplesFolder/rimshot1.wav", key: 50 },
 	pad3: { sound: "/drumSamplesFolder/808-3.wav", key: 51 },
-	pad4: { sound: "/drumSamplesFolder/808-4.wav", key: 52 },
+	pad4: { sound: "/drumSamplesFolder/808-4-modify.wav", key: 52 },
 	pad5: { sound: "/drumSamplesFolder/808-5.wav", key: 81 },
 	pad6: { sound: "/drumSamplesFolder/clap1.wav", key: 87 },
 	pad7: { sound: "/drumSamplesFolder/clap2.wav", key: 69 },
