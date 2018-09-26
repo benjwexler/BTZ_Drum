@@ -194,18 +194,29 @@ let snareJordanKit = {
 	pad16: { sound: "/snareJordanKit/clap_clean.wav", key: 86 }
 };
 
-let allKits = [kit1, kit2, snareJordanKit];
-
+// let allKits = [kit1, kit2, snareJordanKit];
+let allKits = [[kit1, "Metro Boomin", "https://www.youtube.com/embed/4xiAW532xS0", "https://soundcloud.com/metroboomin"], [kit2, "Just Blaze", "https://www.youtube.com/embed/wQ7rkIppxPM", "https://soundcloud.com/just-blaze"], [snareJordanKit, "Boi-1da","https://www.youtube.com/embed/Z9Fv3_1kgRY", "https://soundcloud.com/metroboomin"]];
+let producerName = document.getElementById("topSectionMiddle");
+let vidSource = document.getElementById("youtubeVid")
+let soundcloudLink = document.getElementById("soundcloudIcon")
 let changeKitCounter = 1;
 
 function changeKits() {
 	if (changeKitCounter === 0) {
-		soundObject = allKits[changeKitCounter];
+		soundObject = allKits[changeKitCounter][0];
+		producerName.innerText = allKits[changeKitCounter][1]
+		youtubeVid.src = allKits[changeKitCounter][2]
+		soundcloudLink.href = allKits[changeKitCounter][3]
+
+		
 		changeKitCounter++
 		console.log(changeKitCounter)
 	}
 	else {
-		soundObject = allKits[changeKitCounter];
+		soundObject = allKits[changeKitCounter][0];
+		producerName.innerText = allKits[changeKitCounter][1]
+		youtubeVid.src = allKits[changeKitCounter][2]
+		soundcloudLink.href = allKits[changeKitCounter][3]
 		changeKitCounter++;
 		console.log(changeKitCounter)
 	}
@@ -217,12 +228,18 @@ function changeKits() {
 
 function previousKits() {
 	if (changeKitCounter === 0) {
-		soundObject = allKits[changeKitCounter];
+		soundObject = allKits[changeKitCounter][0];
+		producerName.innerText = allKits[changeKitCounter][1]
+		youtubeVid.src = allKits[changeKitCounter][2]
+		soundcloudLink.href = allKits[changeKitCounter][3]
 		changeKitCounter = allKits.length - 1
 
 		console.log(changeKitCounter)
 	} else {
-		soundObject = allKits[changeKitCounter];
+		soundObject = allKits[changeKitCounter][0];
+		producerName.innerText = allKits[changeKitCounter][1]
+		youtubeVid.src = allKits[changeKitCounter][2]
+		soundcloudLink.href = allKits[changeKitCounter][3]
 		changeKitCounter--;
 		console.log(changeKitCounter)
 	}

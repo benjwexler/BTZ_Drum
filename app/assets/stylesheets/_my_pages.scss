@@ -545,6 +545,7 @@ a:active {
     background-color: black;
     background: radial-gradient(silver, black);
     overflow: hidden;
+    min-width: 100px;
   
 }
 #knob2Container {
@@ -566,10 +567,12 @@ a:active {
     color: white;
     margin: auto;
     color: #ff8800; 
+    margin-left: 25%;
 }
 
 #soundcloudIcon {
     color: #ff8800;  
+    
 }
 
 #facebookIcon {
