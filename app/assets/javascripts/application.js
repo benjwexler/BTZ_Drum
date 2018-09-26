@@ -179,23 +179,25 @@ let kit2Sounds = {
 	pad16: "/drumSamplesFolder/kick2.wav"
 };
 
+
+
 let snareJordanKit = {
-	pad1: { sound: "/snareJordanKit/clap air.wav", key: 49 },
-	pad2: { sound: "/snareJordanKit/clap clean.wav", key: 50 },
-	pad3: { sound: "/snareJordanKit/clap clean.wav", key: 51 },
-	pad4: { sound: "/snareJordanKit/clap clean.wav", key: 52 },
-	pad5: { sound: "/snareJordanKit/clap clean.wav", key: 81 },
-	pad6: { sound: "/snareJordanKit/clap clean.wav", key: 87 },
-	pad7: { sound: "/snareJordanKit/clap_clean.wav", key: 69 },
-	pad8: { sound: "/snareJordanKit/clap_clean.wav", key: 82 },
-	pad9: { sound: "/snareJordanKit/clap_clean.wav", key: 65 },
-	pad10: { sound: "/snareJordanKit/clap_clean.wav", key: 83 },
-	pad11: { sound: "/snareJordanKit/clap_clean.wav", key: 68 },
-	pad12: { sound: "/snareJordanKit/clap_clean.wav", key: 70 },
-	pad13: { sound: "/snareJordanKit/clap_clean.wav", key: 90 },
-	pad14: { sound: "/snareJordanKit/clap_clean.wav", key: 88 },
-	pad15: { sound: "/snareJordanKit/clap_clean.wav", key: 67 },
-	pad16: { sound: "/snareJordanKit/clap_clean.wav", key: 86 }
+	pad1: { sound: "/boi-1daBTZ/boi1da - Ahh.wav", key: 49 },
+	pad2: { sound: "/boi-1daBTZ/boi1da - AuntyKick2.wav", key: 50 },
+	pad3: { sound: "/boi-1daBTZ/boi1da - batmanSnare.wav", key: 51 },
+	pad4: { sound: "/boi-1daBTZ/boi1da - beautifulHat.wav", key: 52 },
+	pad5: { sound: "/boi-1daBTZ/boi1da - clap.wav", key: 81 },
+	pad6: { sound: "/boi-1daBTZ/boi1da - hat3.wav", key: 87 },
+	pad7: { sound: "/boi-1daBTZ/boi1da - Ho.wav", key: 69 },
+	pad8: { sound: "/boi-1daBTZ/boi1da - NightDuoKick.wav", key: 82 },
+	pad9: { sound: "/boi-1daBTZ/boi1da - NightKcik.wav", key: 65 },
+	pad10: { sound: "/boi-1daBTZ/boi1da - openHat.wav", key: 83 },
+	pad11: { sound: "/boi-1daBTZ/boi1da - quadSnare.wav", key: 68 },
+	pad12: { sound: "/boi-1daBTZ/boi1da - shaker.wav", key: 70 },
+	pad13: { sound: "/boi-1daBTZ/boi1da - snare.wav", key: 90 },
+	pad14: { sound: "/boi-1daBTZ/boi1da - tink.wav", key: 88 },
+	pad15: { sound: "/boi-1daBTZ/boi1da - trioSnare.wav", key: 67 },
+	pad16: { sound: "/boi-1daBTZ/boi1da - Yeah.wav", key: 86 }
 };
 
 // let allKits = [kit1, kit2, snareJordanKit];
