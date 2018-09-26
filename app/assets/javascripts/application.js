@@ -100,22 +100,22 @@ for (var i = 0; i < noteRepeatButtons.length; i++) {
 
 
 let soundObject = {
-	pad1: { sound: "/drumSamplesFolder/MetroHat1.wav", key: 49 },
-	pad2: { sound: "/drumSamplesFolder/rimshot1-modify.wav", key: 50 },
-	pad3: { sound: "/drumSamplesFolder/808-3.wav", key: 51 },
-	pad4: { sound: "/drumSamplesFolder/808-4-modify.wav", key: 52 },
-	pad5: { sound: "/drumSamplesFolder/808-5.wav", key: 81 },
-	pad6: { sound: "/drumSamplesFolder/clap1-modify.wav", key: 87 },
-	pad7: { sound: "/drumSamplesFolder/clap2-modify.wav", key: 69 },
-	pad8: { sound: "/drumSamplesFolder/clap3-modify.wav", key: 82 },
-	pad9: { sound: "/drumSamplesFolder/clap4-modify.wav", key: 65 },
-	pad10: { sound: "/drumSamplesFolder/crash1-modify.wav", key: 83 },
-	pad11: { sound: "/drumSamplesFolder/hat1-modify.wav", key: 68 },
-	pad12: { sound: "/drumSamplesFolder/hat2-modify.wav", key: 70 },
-	pad13: { sound: "/drumSamplesFolder/hat3-modify.wav", key: 90 },
-	pad14: { sound: "/drumSamplesFolder/hat4-modify.wav", key: 88 },
-	pad15: { sound: "/drumSamplesFolder/kick1.wav", key: 67 },
-	pad16: { sound: "/drumSamplesFolder/kick2.wav", key: 86 }
+	pad1: { sound: "/justBlazeBtz/JustBlaze-989kick.wav", key: 49 },
+	pad2: { sound: "/justBlazeBtz/JustBlaze-blueprintKick10.wav", key: 50 },
+	pad3: { sound: "/justBlazeBtz/JustBlaze-CFIRM.wav", key: 51 },
+	pad4: { sound: "/justBlazeBtz/JustBlaze-dlz19.wav", key: 52 },
+	pad5: { sound: "/justBlazeBtz/JustBlaze-dlz28.wav", key: 81 },
+	pad6: { sound: "/justBlazeBtz/JustBlaze-fullKick.wav", key: 87 },
+	pad7: { sound: "/justBlazeBtz/JustBlaze-hat3.wav", key: 69 },
+	pad8: { sound: "/justBlazeBtz/JustBlaze-hat6.wav", key: 82 },
+	pad9: { sound: "/justBlazeBtz/JustBlaze-hatkick4.wav", key: 65 },
+	pad10: { sound: "/justBlazeBtz/JustBlaze-loosenar.wav", key: 83 },
+	pad11: { sound: "/justBlazeBtz/JustBlaze-openHat2.wav", key: 68 },
+	pad12: { sound: "/justBlazeBtz/JustBlaze-rim1.wav", key: 70 },
+	pad13: { sound: "/justBlazeBtz/JustBlaze-sound10.wav", key: 90 },
+	pad14: { sound: "/justBlazeBtz/JustBlaze-tambsnare.wav", key: 88 },
+	pad15: { sound: "/justBlazeBtz/JustBlaze-Trin_Snare.wav", key: 67 },
+	pad16: { sound: "/justBlazeBtz/JustBlaze-verbSnapRim.wav", key: 86 }
 };
 
 let kit1 = {
@@ -137,23 +137,27 @@ let kit1 = {
 	pad16: { sound: "/drumSamplesFolder/kick2.wav", key: 86 }
 };
 
+"/justBlazeBtz/JustBlaze-989kick.wav"
+
+
+
 let kit2 = {
-	pad1: { sound: "/drumSamplesFolder/triangle1.wav", key: 49 },
-	pad2: { sound: "/drumSamplesFolder/rimshot1.wav", key: 50 },
-	pad3: { sound: "/drumSamplesFolder/808-3.wav", key: 51 },
-	pad4: { sound: "/drumSamplesFolder/808-4.wav", key: 52 },
-	pad5: { sound: "/drumSamplesFolder/808-5.wav", key: 81 },
-	pad6: { sound: "/drumSamplesFolder/clap1.wav", key: 87 },
-	pad7: { sound: "/drumSamplesFolder/clap2.wav", key: 69 },
-	pad8: { sound: "/drumSamplesFolder/clap3.wav", key: 82 },
-	pad9: { sound: "/drumSamplesFolder/clap4.wav", key: 65 },
-	pad10: { sound: "/drumSamplesFolder/crash1.wav", key: 83 },
-	pad11: { sound: "/drumSamplesFolder/hat1.wav", key: 68 },
-	pad12: { sound: "/drumSamplesFolder/hat2.wav", key: 70 },
-	pad13: { sound: "/drumSamplesFolder/hat3.wav", key: 90 },
-	pad14: { sound: "/drumSamplesFolder/hat4.wav", key: 88 },
-	pad15: { sound: "/drumSamplesFolder/kick1.wav", key: 67 },
-	pad16: { sound: "/drumSamplesFolder/kick2.wav", key: 86 }
+	pad1: { sound: "/justBlazeBtz/JustBlaze-989kick.wav", key: 49 },
+	pad2: { sound: "/justBlazeBtz/JustBlaze-blueprintKick10.wav", key: 50 },
+	pad3: { sound: "/justBlazeBtz/JustBlaze-CFIRM.wav", key: 51 },
+	pad4: { sound: "/justBlazeBtz/JustBlaze-dlz19.wav", key: 52 },
+	pad5: { sound: "/justBlazeBtz/JustBlaze-dlz28.wav", key: 81 },
+	pad6: { sound: "/justBlazeBtz/JustBlaze-fullKick.wav", key: 87 },
+	pad7: { sound: "/justBlazeBtz/JustBlaze-hat3.wav", key: 69 },
+	pad8: { sound: "/justBlazeBtz/JustBlaze-hat6.wav", key: 82 },
+	pad9: { sound: "/justBlazeBtz/JustBlaze-hatkick4.wav", key: 65 },
+	pad10: { sound: "/justBlazeBtz/JustBlaze-loosenar.wav", key: 83 },
+	pad11: { sound: "/justBlazeBtz/JustBlaze-openHat2.wav", key: 68 },
+	pad12: { sound: "/justBlazeBtz/JustBlaze-rim1.wav", key: 70 },
+	pad13: { sound: "/justBlazeBtz/JustBlaze-sound10.wav", key: 90 },
+	pad14: { sound: "/justBlazeBtz/JustBlaze-tambsnare.wav", key: 88 },
+	pad15: { sound: "/justBlazeBtz/JustBlaze-Trin_Snare.wav", key: 67 },
+	pad16: { sound: "/justBlazeBtz/JustBlaze-verbSnapRim.wav", key: 86 }
 };
 
 let kit2Sounds = {
@@ -195,7 +199,7 @@ let snareJordanKit = {
 };
 
 // let allKits = [kit1, kit2, snareJordanKit];
-let allKits = [[kit1, "Metro Boomin", "https://www.youtube.com/embed/4xiAW532xS0", "https://soundcloud.com/metroboomin"], [kit2, "Just Blaze", "https://www.youtube.com/embed/wQ7rkIppxPM", "https://soundcloud.com/just-blaze"], [snareJordanKit, "Boi-1DA","https://www.youtube.com/embed/Z9Fv3_1kgRY", "https://soundcloud.com/boi1damusic"]];
+let allKits = [[kit2, "Just Blaze", "https://www.youtube.com/embed/wQ7rkIppxPM", "https://soundcloud.com/just-blaze"], [kit1, "Metro Boomin", "https://www.youtube.com/embed/4xiAW532xS0", "https://soundcloud.com/metroboomin"], [snareJordanKit, "Boi-1DA","https://www.youtube.com/embed/Z9Fv3_1kgRY", "https://soundcloud.com/boi1damusic"]];
 let producerName = document.getElementById("topSectionMiddle");
 let vidSource = document.getElementById("youtubeVid")
 let soundcloudLink = document.getElementById("soundcloudIcon")
