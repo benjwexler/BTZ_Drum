@@ -70,7 +70,7 @@ function setNoteDivision() {
 		console.log(tempoVal);
 		break;	
 		case 'thirtySecondNote':
-		thirtySecondNote.style.background = "black";
+		quarterNote.style.background = "black";
 		eigthNote.style.background = "black";
 		sixteenthNote.style.background = "black";
 		thirtySecondNote.style.background = "background";
