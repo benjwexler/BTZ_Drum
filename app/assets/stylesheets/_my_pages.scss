@@ -83,6 +83,16 @@ background: linear-gradient(to bottom right, black 77%, #00d7d7 78%)
         padding-top: 3px;
     }
 
+    // #keyAssign {
+    //     padding-top: 3px;
+    // }
+
+
+}
+
+@media only screen and (max-width: 660px) {
+   
+
     #keyAssign {
         padding-top: 3px;
     }
@@ -290,6 +300,7 @@ background: linear-gradient(to bottom right, black 77%, #00d7d7 78%)
     text-align: center;
     border-radius: 10%;
     margin-top: 10px;
+    padding-left: 18px;
   
     border: 5px solid black;
     // background: rgb(109, 168, 179);
@@ -298,6 +309,15 @@ background: linear-gradient(to bottom right, black 77%, #00d7d7 78%)
     font-family: 'Orbitron', sans-serif;
     background: linear-gradient(to bottom, rgba(34, 43, 164, 0.486) 7%, rgba(34, 43, 164, 0.274) 88%);
     color: white;
+    overflow: visible
+}
+
+@media only screen and (max-width: 1100px) {
+    #set-tempo {
+        
+        font-size: 31px;
+    }
+    
 }
 
 #videoContainer {
