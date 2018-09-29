@@ -32,6 +32,7 @@ let tempoArr = [];
 
 // let tempoVal = document.getElementById("set-noteDivision").value;
 let tempoVal = 8;
+let z;
 
 
 
@@ -852,9 +853,61 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 			if (counter === 0 || noteRepeatSwitcher === "on") {
+				console.log(counterObj.newPadCounter1)
+				if (bufferNodeName === 'bufferNode1') {
+					z = counterObj.newPadCounter1;
+				}
+				if (bufferNodeName === 'bufferNode2') {
+					z = counterObj.newPadCounter2;
+				}
+				if (bufferNodeName === 'bufferNode3') {
+					z = counterObj.newPadCounter3;
+				}
+				if (bufferNodeName === 'bufferNode4') {
+					z = counterObj.newPadCounter4;
+				}
+				if (bufferNodeName === 'bufferNode5') {
+					z = counterObj.newPadCounter5;
+				}
+				if (bufferNodeName === 'bufferNode6') {
+					z = counterObj.newPadCounter6;
+				}
+				if (bufferNodeName === 'bufferNode7') {
+					z = counterObj.newPadCounter7;
+				}
+				if (bufferNodeName === 'bufferNode8') {
+					z = counterObj.newPadCounter8;
+				}
+				if (bufferNodeName === 'bufferNode9') {
+					z = counterObj.newPadCounter9;
+				}
+				if (bufferNodeName === 'bufferNode10') {
+					z = counterObj.newPadCounter10;
+				}
+				if (bufferNodeName === 'bufferNode11') {
+					z = counterObj.newPadCounter11;
+				}
+				if (bufferNodeName === 'bufferNode12') {
+					z = counterObj.newPadCounter12;
+				}
+				if (bufferNodeName === 'bufferNode13') {
+					z = counterObj.newPadCounter13;
+				}
+				if (bufferNodeName === 'bufferNode14') {
+					z = counterObj.newPadCounter14;
+				}
+				if (bufferNodeName === 'bufferNode15') {
+					z = counterObj.newPadCounter15;
+				}
+				if (bufferNodeName === 'bufferNode16') {
+					z = counterObj.newPadCounter16;
+				}
+					if (z < 2) {
 				playSound1(bufferNodeName, soundFile, interval);
 				addBackground(pad);
 				setTimeout(removeBackground, 3, pad);
+
+				}
 
 			}
 			else {
