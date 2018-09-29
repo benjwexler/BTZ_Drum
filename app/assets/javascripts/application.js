@@ -334,15 +334,15 @@ function keyBind() {
 function beatRepeatToggle() {
 	console.log("Beat Repeat button Works");
 	if (noteRepeatSwitcher === "on") {
-		beatRepeatBtn.style.backgroundColor = "black";
+		beatRepeatBtn.style.backgroundColor = "inherit";
 		beatRepeatBtn.innerText = "Beat Repeat Off";
 		beatRepeatBtn.style.color = "white";
 		noteRepeatSwitcher = "off";
 
-		quarterNote.style.background = "black";
-		eigthNote.style.background = "black";
-		sixteenthNote.style.background = "black";
-		thirtySecondNote.style.background = "black";;
+		quarterNote.style.background = "inherit";
+		eigthNote.style.background = "inherit";
+		sixteenthNote.style.background = "inherit";
+		thirtySecondNote.style.background = "inherit";;
 		tempoVal = 8;
 
 		console.log("Note Repeat Switcher is on")
