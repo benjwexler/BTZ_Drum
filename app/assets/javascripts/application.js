@@ -205,48 +205,57 @@ let allKits = [[kit2, "Just Blaze", "https://www.youtube.com/embed/wQ7rkIppxPM",
 let producerName = document.getElementById("topSectionMiddle");
 let vidSource = document.getElementById("youtubeVid")
 let soundcloudLink = document.getElementById("soundcloudIcon")
-let changeKitCounter = 1;
+let changeKitCounter = 0;
 
 function changeKits() {
 	if (changeKitCounter === 0) {
+		changeKitCounter++
 		soundObject = allKits[changeKitCounter][0];
 		producerName.innerText = allKits[changeKitCounter][1]
 		youtubeVid.src = allKits[changeKitCounter][2]
 		soundcloudLink.href = allKits[changeKitCounter][3]
 
+	
 		
-		changeKitCounter++
 		console.log(changeKitCounter)
 	}
 	else {
+		changeKitCounter++;
+		if (changeKitCounter === allKits.length) {
+			changeKitCounter = 0;
+			console.log(changeKitCounter)
+		}
 		soundObject = allKits[changeKitCounter][0];
 		producerName.innerText = allKits[changeKitCounter][1]
 		youtubeVid.src = allKits[changeKitCounter][2]
 		soundcloudLink.href = allKits[changeKitCounter][3]
-		changeKitCounter++;
+		
 		console.log(changeKitCounter)
 	}
-	if (changeKitCounter === allKits.length) {
-		changeKitCounter = 0;
-		console.log(changeKitCounter)
-	}
+	// if (changeKitCounter === allKits.length) {
+	// 	changeKitCounter = 0;
+	// 	console.log(changeKitCounter)
+	// }
 }
 
 function previousKits() {
 	if (changeKitCounter === 0) {
+		changeKitCounter = allKits.length - 1
 		soundObject = allKits[changeKitCounter][0];
 		producerName.innerText = allKits[changeKitCounter][1]
 		youtubeVid.src = allKits[changeKitCounter][2]
 		soundcloudLink.href = allKits[changeKitCounter][3]
-		changeKitCounter = allKits.length - 1
+		
 
 		console.log(changeKitCounter)
 	} else {
+
+		changeKitCounter--
 		soundObject = allKits[changeKitCounter][0];
 		producerName.innerText = allKits[changeKitCounter][1]
 		youtubeVid.src = allKits[changeKitCounter][2]
 		soundcloudLink.href = allKits[changeKitCounter][3]
-		changeKitCounter--;
+		
 		console.log(changeKitCounter)
 	}
 
