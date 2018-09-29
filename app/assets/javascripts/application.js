@@ -430,7 +430,7 @@ beatRepeatBtn.addEventListener("click", beatRepeatToggle);
 
 function keyToggle() {
 	if (switcher === "on") {
-		keyAssign.style.backgroundColor = "black";
+		keyAssign.style.backgroundColor = "inherit";
 		document.getElementById('KeyAssignOfforOnText').innerText = "Off";
 		keyAssign.style.color = "white";
 
