@@ -18,7 +18,7 @@
 //= require popper
 //= require bootstrap
 
-console.log("Rails");
+
 
 let quarterNote = document.getElementById("quarterNote");
 let eigthNote = document.getElementById("eigthNote");
@@ -47,8 +47,6 @@ function setNoteDivision() {
 		sixteenthNote.style.background = "black";
 		thirtySecondNote.style.background = "black";
 		tempoVal = 4
-		console.log(this.id);
-		console.log(tempoVal);
 		tempoArr
 
 		break;
@@ -58,8 +56,6 @@ function setNoteDivision() {
 		sixteenthNote.style.background = "black";
 		thirtySecondNote.style.background = "black";;
 		tempoVal = 8;
-		console.log(this.id);
-		console.log(tempoVal);
 		break;	
 		case 'sixteenthNote':
 		quarterNote.style.background = "black";
@@ -67,8 +63,6 @@ function setNoteDivision() {
 		sixteenthNote.style.background = "background";
 		thirtySecondNote.style.background = "black";
 		tempoVal = 16;
-		console.log(this.id);
-		console.log(tempoVal);
 		break;	
 		case 'thirtySecondNote':
 		quarterNote.style.background = "black";
@@ -76,8 +70,6 @@ function setNoteDivision() {
 		sixteenthNote.style.background = "black";
 		thirtySecondNote.style.background = "background";
 		tempoVal = 32;
-		console.log(this.id);
-		console.log(tempoVal);
 		break;
 	}
 
@@ -89,16 +81,6 @@ function setNoteDivision() {
 for (var i = 0; i < noteRepeatButtons.length; i++) {
 	noteRepeatButtons[i].addEventListener("click", setNoteDivision)
 }
-
-
-
-
-
-// quarterNote.addEventListener("click", function (event) {
-// 	console.log(this.id);
-// });
-
-
 
 let soundObject = {
 	pad1: { sound: "/justBlazeBtz/JustBlaze-989kick.wav", key: 49 },
@@ -215,28 +197,18 @@ function changeKits() {
 		producerName.innerText = allKits[changeKitCounter][1]
 		youtubeVid.src = allKits[changeKitCounter][2]
 		soundcloudLink.href = allKits[changeKitCounter][3]
-
-	
-		
-		console.log(changeKitCounter)
 	}
 	else {
 		changeKitCounter++;
 		if (changeKitCounter === allKits.length) {
 			changeKitCounter = 0;
-			console.log(changeKitCounter)
 		}
 		soundObject = allKits[changeKitCounter][0];
 		producerName.innerText = allKits[changeKitCounter][1]
 		youtubeVid.src = allKits[changeKitCounter][2]
 		soundcloudLink.href = allKits[changeKitCounter][3]
-		
-		console.log(changeKitCounter)
 	}
-	// if (changeKitCounter === allKits.length) {
-	// 	changeKitCounter = 0;
-	// 	console.log(changeKitCounter)
-	// }
+
 }
 
 function previousKits() {
@@ -246,9 +218,6 @@ function previousKits() {
 		producerName.innerText = allKits[changeKitCounter][1]
 		youtubeVid.src = allKits[changeKitCounter][2]
 		soundcloudLink.href = allKits[changeKitCounter][3]
-		
-
-		console.log(changeKitCounter)
 	} else {
 
 		changeKitCounter--
@@ -256,13 +225,10 @@ function previousKits() {
 		producerName.innerText = allKits[changeKitCounter][1]
 		youtubeVid.src = allKits[changeKitCounter][2]
 		soundcloudLink.href = allKits[changeKitCounter][3]
-		
-		console.log(changeKitCounter)
 	}
 
 	if (changeKitCounter === allKits.length) {
 		changeKitCounter--
-		console.log(changeKitCounter)
 	}
 }
 
@@ -333,7 +299,6 @@ function keyBind() {
 };
 
 function beatRepeatToggle() {
-	console.log("Beat Repeat button Works");
 	if (noteRepeatSwitcher === "on") {
 		beatRepeatBtn.style.backgroundColor = "inherit";
 		beatRepeatBtn.innerText = "Beat Repeat Off";
@@ -346,12 +311,8 @@ function beatRepeatToggle() {
 		thirtySecondNote.style.background = "inherit";;
 		tempoVal = 8;
 
-		console.log("Note Repeat Switcher is on")
-
 		if (counterObj.newPadCounter1>0) {
-			console.log(counterObj.newPadCounter1);
 			for (let i=0; i<=counterObj.newPadCounter1; i++){
-				console.log(i);
 			bufferNode1.stop(context.currentTime);
 			bufferNode1.stop(context.currentTime);
 			}
@@ -539,16 +500,10 @@ var context = new window.AudioContext;
 
 document.addEventListener("DOMContentLoaded", function () {
 
-	 
-	console.log(context);
 	var gainNode = context.createGain();
 	function beatRepeat() {
 		tempo2 = document.getElementById("set-tempo").value;
-		console.log(document.getElementById("set-tempo").value);
-		// noteDivision2 = document.getElementById("set-noteDivision").value;
-
 		noteDivision2 = tempoVal;
-		// console.log(document.getElementById("set-noteDivision").value);
 		let interval = 1 / ((tempo2 / 60) * noteDivision2 / 4)
 		return interval
 	}
@@ -567,8 +522,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 					if (noteRepeatSwitcher==="on") {
 						window[nameBufferNode].loop = true;
-						console.log(interval);
-						console.log(buffer.duration);
 						window[nameBufferNode].loopEnd = interval;
 					}
 					
@@ -858,61 +811,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 			if (counter === 0 || noteRepeatSwitcher === "on") {
-				// console.log(counterObj.newPadCounter1)
-				// if (bufferNodeName === 'bufferNode1') {
-				// 	z = counterObj.newPadCounter1;
-				// }
-				// if (bufferNodeName === 'bufferNode2') {
-				// 	z = counterObj.newPadCounter2;
-				// }
-				// if (bufferNodeName === 'bufferNode3') {
-				// 	z = counterObj.newPadCounter3;
-				// }
-				// if (bufferNodeName === 'bufferNode4') {
-				// 	z = counterObj.newPadCounter4;
-				// }
-				// if (bufferNodeName === 'bufferNode5') {
-				// 	z = counterObj.newPadCounter5;
-				// }
-				// if (bufferNodeName === 'bufferNode6') {
-				// 	z = counterObj.newPadCounter6;
-				// }
-				// if (bufferNodeName === 'bufferNode7') {
-				// 	z = counterObj.newPadCounter7;
-				// }
-				// if (bufferNodeName === 'bufferNode8') {
-				// 	z = counterObj.newPadCounter8;
-				// }
-				// if (bufferNodeName === 'bufferNode9') {
-				// 	z = counterObj.newPadCounter9;
-				// }
-				// if (bufferNodeName === 'bufferNode10') {
-				// 	z = counterObj.newPadCounter10;
-				// }
-				// if (bufferNodeName === 'bufferNode11') {
-				// 	z = counterObj.newPadCounter11;
-				// }
-				// if (bufferNodeName === 'bufferNode12') {
-				// 	z = counterObj.newPadCounter12;
-				// }
-				// if (bufferNodeName === 'bufferNode13') {
-				// 	z = counterObj.newPadCounter13;
-				// }
-				// if (bufferNodeName === 'bufferNode14') {
-				// 	z = counterObj.newPadCounter14;
-				// }
-				// if (bufferNodeName === 'bufferNode15') {
-				// 	z = counterObj.newPadCounter15;
-				// }
-				// if (bufferNodeName === 'bufferNode16') {
-				// 	z = counterObj.newPadCounter16;
-				// }
-				// 	if (z < 2) {
+		
 				playSound1(bufferNodeName, soundFile, interval);
 				addBackground(pad);
 				setTimeout(removeBackground, 3, pad);
-
-				// }
 
 			}
 			else {
@@ -950,11 +852,9 @@ function onMIDIFailure() {
 var context = new window.AudioContext;
 
 function onMIDImessage(messageData) {
-	console.log(context);
 	var gainNode = context.createGain();
 	function beatRepeat() {
 		tempo2 = document.getElementById("set-tempo").value;
-		console.log(document.getElementById("set-tempo").value);
 		noteDivision2 = tempoVal;
 		let interval = 1 / ((tempo2 / 60) * noteDivision2 / 4)
 		return interval
@@ -974,8 +874,6 @@ function onMIDImessage(messageData) {
 
 					if (noteRepeatSwitcher==="on") {
 						window[nameBufferNode].loop = true;
-						console.log(interval);
-						console.log(buffer.duration);
 						window[nameBufferNode].loopEnd = interval;
 					}
 					
@@ -1093,7 +991,6 @@ function onMIDImessage(messageData) {
 	function play(note) {
 		switch (note.on) {
 			case 144:
-				console.log(note)
 				if (note.pitch == 0 || note.pitch == 24 || note.pitch == 48 || note.pitch == 72 || note.pitch == 96 || note.pitch == 120) {
 					playAndStop1('bufferNode1', soundObject.pad1.sound, 'pad1', 0)
 				}
@@ -1145,7 +1042,6 @@ function onMIDImessage(messageData) {
 
 				break;
 			case 128:
-				console.log("Off")
 				if (noteRepeatSwitcher === "on") {
 					if (note.pitch == 0 || note.pitch == 24 || note.pitch == 48 || note.pitch == 72 || note.pitch == 96 || note.pitch == 120) {
 						stopSound1('bufferNode1', 0)
