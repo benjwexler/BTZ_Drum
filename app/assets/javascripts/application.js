@@ -349,7 +349,12 @@ function beatRepeatToggle() {
 		console.log("Note Repeat Switcher is on")
 
 		if (counterObj.newPadCounter1>0) {
+			console.log(counterObj.newPadCounter1);
+			for (let i=0; i<=counterObj.newPadCounter1; i++){
+				console.log(i);
 			bufferNode1.stop(context.currentTime);
+			bufferNode1.stop(context.currentTime);
+			}
 			counterObj.newPadCounter1 = 0;	
 		}
 		if (counterObj.newPadCounter2>0) {
