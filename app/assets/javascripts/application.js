@@ -499,6 +499,7 @@ let counter;
 var context = new window.AudioContext;
 
 document.addEventListener("DOMContentLoaded", function () {
+	console.log("DOMContentLoaded")
 
 	var gainNode = context.createGain();
 	function beatRepeat() {
