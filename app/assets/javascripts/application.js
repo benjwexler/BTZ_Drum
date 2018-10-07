@@ -38,42 +38,42 @@ let z;
 
 function setNoteDivision() {
 
-	if (noteRepeatSwitcher === "on") { 
+	if (noteRepeatSwitcher === "on") {
 
-	switch (this.id) {
-		case 'quarterNote':
-		quarterNote.style.background = "background";
-		eigthNote.style.background = "black";
-		sixteenthNote.style.background = "black";
-		thirtySecondNote.style.background = "black";
-		tempoVal = 4
-		tempoArr
+		switch (this.id) {
+			case 'quarterNote':
+				quarterNote.style.background = "background";
+				eigthNote.style.background = "black";
+				sixteenthNote.style.background = "black";
+				thirtySecondNote.style.background = "black";
+				tempoVal = 4
+				tempoArr
 
-		break;
-		case 'eigthNote':
-		quarterNote.style.background = "black";
-		eigthNote.style.background = "background";
-		sixteenthNote.style.background = "black";
-		thirtySecondNote.style.background = "black";;
-		tempoVal = 8;
-		break;	
-		case 'sixteenthNote':
-		quarterNote.style.background = "black";
-		eigthNote.style.background = "black";
-		sixteenthNote.style.background = "background";
-		thirtySecondNote.style.background = "black";
-		tempoVal = 16;
-		break;	
-		case 'thirtySecondNote':
-		quarterNote.style.background = "black";
-		eigthNote.style.background = "black";
-		sixteenthNote.style.background = "black";
-		thirtySecondNote.style.background = "background";
-		tempoVal = 32;
-		break;
+				break;
+			case 'eigthNote':
+				quarterNote.style.background = "black";
+				eigthNote.style.background = "background";
+				sixteenthNote.style.background = "black";
+				thirtySecondNote.style.background = "black";;
+				tempoVal = 8;
+				break;
+			case 'sixteenthNote':
+				quarterNote.style.background = "black";
+				eigthNote.style.background = "black";
+				sixteenthNote.style.background = "background";
+				thirtySecondNote.style.background = "black";
+				tempoVal = 16;
+				break;
+			case 'thirtySecondNote':
+				quarterNote.style.background = "black";
+				eigthNote.style.background = "black";
+				sixteenthNote.style.background = "black";
+				thirtySecondNote.style.background = "background";
+				tempoVal = 32;
+				break;
+		}
+
 	}
-
-}
 }
 
 
@@ -184,7 +184,7 @@ let snareJordanKit = {
 };
 
 // let allKits = [kit1, kit2, snareJordanKit];
-let allKits = [[kit2, "Just Blaze", "https://www.youtube.com/embed/wQ7rkIppxPM", "https://soundcloud.com/just-blaze"], [kit1, "Metro Boomin", "https://www.youtube.com/embed/4xiAW532xS0", "https://soundcloud.com/metroboomin"], [snareJordanKit, "Boi-1DA","https://www.youtube.com/embed/Z9Fv3_1kgRY", "https://soundcloud.com/boi1damusic"]];
+let allKits = [[kit2, "Just Blaze", "https://www.youtube.com/embed/wQ7rkIppxPM", "https://soundcloud.com/just-blaze"], [kit1, "Metro Boomin", "https://www.youtube.com/embed/4xiAW532xS0", "https://soundcloud.com/metroboomin"], [snareJordanKit, "Boi-1DA", "https://www.youtube.com/embed/Z9Fv3_1kgRY", "https://soundcloud.com/boi1damusic"]];
 let producerName = document.getElementById("topSectionMiddle");
 let vidSource = document.getElementById("youtubeVid")
 let soundcloudLink = document.getElementById("soundcloudIcon")
@@ -256,12 +256,12 @@ keyAssign.addEventListener("click", keyToggle);
 
 let tempoForm = document.getElementById("set-tempo");
 
-tempoForm.onkeypress = function(e) {
-	var key = e.charCode || e.keyCode || 0;     
+tempoForm.onkeypress = function (e) {
+	var key = e.charCode || e.keyCode || 0;
 	if (key == 13) {
-	  e.preventDefault();
+		e.preventDefault();
 	}
-  }
+}
 
 function displayKeyMappings() {
 	hiddenButton[0].innerText = String.fromCharCode(soundObject.pad1.key)
@@ -311,74 +311,74 @@ function beatRepeatToggle() {
 		thirtySecondNote.style.background = "inherit";;
 		tempoVal = 8;
 
-		if (counterObj.newPadCounter1>0) {
-			for (let i=0; i<=counterObj.newPadCounter1; i++){
-			bufferNode1.stop(context.currentTime);
-			bufferNode1.stop(context.currentTime);
+		if (counterObj.newPadCounter1 > 0) {
+			for (let i = 0; i <= counterObj.newPadCounter1; i++) {
+				bufferNode1.stop(context.currentTime);
+				console.log("nfrijnfr")
 			}
-			counterObj.newPadCounter1 = 0;	
+			counterObj.newPadCounter1 = 0;
 		}
-		if (counterObj.newPadCounter2>0) {
+		if (counterObj.newPadCounter2 > 0) {
 			bufferNode2.stop(context.currentTime);
-			counterObj.newPadCounter2 = 0;	
+			counterObj.newPadCounter2 = 0;
 		}
-		if (counterObj.newPadCounter3>0) {
+		if (counterObj.newPadCounter3 > 0) {
 			bufferNode3.stop(context.currentTime);
-			counterObj.newPadCounter3 = 0;	
+			counterObj.newPadCounter3 = 0;
 		}
-		if (counterObj.newPadCounter4>0) {
+		if (counterObj.newPadCounter4 > 0) {
 			bufferNode4.stop(context.currentTime);
-			counterObj.newPadCounter4 = 0;	
+			counterObj.newPadCounter4 = 0;
 		}
-		if (counterObj.newPadCounter5>0) {
+		if (counterObj.newPadCounter5 > 0) {
 			bufferNode5.stop(context.currentTime);
-			counterObj.newPadCounter5 = 0;	
+			counterObj.newPadCounter5 = 0;
 		}
-		if (counterObj.newPadCounter6>0) {
+		if (counterObj.newPadCounter6 > 0) {
 			bufferNode6.stop(context.currentTime);
-			counterObj.newPadCounter6 = 0;	
+			counterObj.newPadCounter6 = 0;
 		}
-		if (counterObj.newPadCounter7>0) {
+		if (counterObj.newPadCounter7 > 0) {
 			bufferNode7.stop(context.currentTime);
-			counterObj.newPadCounter7 = 0;	
+			counterObj.newPadCounter7 = 0;
 		}
-		if (counterObj.newPadCounter8>0) {
+		if (counterObj.newPadCounter8 > 0) {
 			bufferNode8.stop(context.currentTime);
-			counterObj.newPadCounter8 = 0;	
+			counterObj.newPadCounter8 = 0;
 		}
-		if (counterObj.newPadCounter9>0) {
+		if (counterObj.newPadCounter9 > 0) {
 			bufferNode9.stop(context.currentTime);
-			counterObj.newPadCounter9 = 0;	
+			counterObj.newPadCounter9 = 0;
 		}
-		if (counterObj.newPadCounter10>0) {
+		if (counterObj.newPadCounter10 > 0) {
 			bufferNode10.stop(context.currentTime);
-			counterObj.newPadCounter10 = 0;	
+			counterObj.newPadCounter10 = 0;
 		}
-		if (counterObj.newPadCounter11>0) {
+		if (counterObj.newPadCounter11 > 0) {
 			bufferNode11.stop(context.currentTime);
-			counterObj.newPadCounter11 = 0;	
+			counterObj.newPadCounter11 = 0;
 		}
-		if (counterObj.newPadCounter12>0) {
+		if (counterObj.newPadCounter12 > 0) {
 			bufferNode12.stop(context.currentTime);
-			counterObj.newPadCounter12 = 0;	
+			counterObj.newPadCounter12 = 0;
 		}
-		if (counterObj.newPadCounter13>0) {
+		if (counterObj.newPadCounter13 > 0) {
 			bufferNode13.stop(context.currentTime);
-			counterObj.newPadCounter13 = 0;	
+			counterObj.newPadCounter13 = 0;
 		}
-		if (counterObj.newPadCounter14>0) {
+		if (counterObj.newPadCounter14 > 0) {
 			bufferNode14.stop(context.currentTime);
-			counterObj.newPadCounter14 = 0;	
+			counterObj.newPadCounter14 = 0;
 		}
-		if (counterObj.newPadCounter15>0) {
+		if (counterObj.newPadCounter15 > 0) {
 			bufferNode15.stop(context.currentTime);
-			counterObj.newPadCounter15 = 0;	
+			counterObj.newPadCounter15 = 0;
 		}
-		if (counterObj.newPadCounter16>0) {
+		if (counterObj.newPadCounter16 > 0) {
 			bufferNode16.stop(context.currentTime);
-			counterObj.newPadCounter16 = 0;	
+			counterObj.newPadCounter16 = 0;
 		}
-		
+
 	} else {
 		beatRepeatBtn.style.backgroundColor = "yellow";
 		beatRepeatBtn.innerText = "Beat Repeat On";
@@ -436,29 +436,29 @@ function removeBackground(padNumber) {
 function removeBackgroundPreviousKit() {
 
 	previousKit.classList.remove("backgroundBlack")
-	
+
 }
 
 function addBackgroundPreviousKit() {
-	
-		previousKit.classList.add("backgroundBlack");
 
-		setTimeout(removeBackgroundPreviousKit, 3);
-	
+	previousKit.classList.add("backgroundBlack");
+
+	setTimeout(removeBackgroundPreviousKit, 3);
+
 }
 
 function removeBackgroundNextKit() {
 
 	changeKit.classList.remove("backgroundBlack")
-	
+
 }
 
 function addBackgroundNextKit() {
-	
-		changeKit.classList.add("backgroundBlack");
 
-		setTimeout(removeBackgroundNextKit, 3);
-	
+	changeKit.classList.add("backgroundBlack");
+
+	setTimeout(removeBackgroundNextKit, 3);
+
 }
 
 previousKit.addEventListener("click", addBackgroundPreviousKit);
@@ -481,24 +481,25 @@ changeKit.addEventListener("click", addBackgroundNextKit);
 
 
 function repeatPadEqualsZero(padNumber) {
-	window['repeatPad'+padNumber] = 0
+	window['repeatPad' + padNumber] = 0
 }
 
-for(var i=1; i<=16; i++) {
-		window['repeatPad'+i] = 0;
-	}
+for (var i = 1; i <= 16; i++) {
+	window['repeatPad' + i] = 0;
+}
 
-let counterObj = {	
+let counterObj = {
 };
 
-for(var i=1; i<=16; i++) {
-	counterObj['newPadCounter'+i] = 0;
+for (var i = 1; i <= 16; i++) {
+	counterObj['newPadCounter' + i] = 0;
 }
 let counter;
 
 var context = new window.AudioContext;
 
 document.addEventListener("DOMContentLoaded", function () {
+	console.log("DOMContentLoaded")
 
 	var gainNode = context.createGain();
 	function beatRepeat() {
@@ -509,6 +510,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	function playSound1(nameBufferNode, soundFile, interval) {
+
+
+
 		window[nameBufferNode] = context.createBufferSource();
 		var request = new XMLHttpRequest();
 		request.open('GET', soundFile, true);
@@ -520,11 +524,11 @@ document.addEventListener("DOMContentLoaded", function () {
 					window[nameBufferNode].buffer = buffer;
 					window[nameBufferNode].connect(gainNode);
 
-					if (noteRepeatSwitcher==="on") {
+					if (noteRepeatSwitcher === "on") {
 						window[nameBufferNode].loop = true;
 						window[nameBufferNode].loopEnd = interval;
 					}
-					
+
 					gainNode.connect(context.destination);
 					gainNode.gain.setValueAtTime(1, context.currentTime);
 				},
@@ -537,11 +541,93 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function stopSound1(nameBufferNode) {
 		window[nameBufferNode].stop(context.currentTime);
-	}; 
+	};
 
-	for(let i=1; i<17; i++) {
-		document.getElementById(`pad${i}`).addEventListener('click', function () { playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`) }, true);
+	function clicker() {
+		console.log("clicked!")
+	};
+
+	// for(let i=1; i<17; i++) {
+	// 	// gainNode.gain.setValueAtTime(0, context.currentTime);
+	// 	// document.getElementById(`pad${i}`).addEventListener('click', clickPad(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`));
+	// 	console.log(bufferNode1)
+	// }
+
+	for (let i = 1; i < 17; i++) {
+		document.getElementById(`pad${i}`).addEventListener('mousedown', function () { playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`) }, true);
 	}
+
+	for (let i = 1; i < 17; i++) {
+		document.getElementById(`pad${i}`).addEventListener('mouseup', function () {
+			if (this.id === 'pad1') {
+				bufferNode1.stop(context.currentTime);
+			}
+			if (this.id === 'pad2') {
+				bufferNode2.stop(context.currentTime);
+			}
+			if (this.id === 'pad3') {
+				bufferNode3.stop(context.currentTime);
+			}
+			if (this.id === 'pad4') {
+				bufferNode4.stop(context.currentTime);
+			}
+			if (this.id === 'pad5') {
+				bufferNode5.stop(context.currentTime);
+			}
+			if (this.id === 'pad6') {
+				bufferNode6.stop(context.currentTime);
+			}
+			if (this.id === 'pad7') {
+				bufferNode7.stop(context.currentTime);
+			}
+			if (this.id === 'pad8') {
+				bufferNode8.stop(context.currentTime);
+			}
+			if (this.id === 'pad9') {
+				bufferNode9.stop(context.currentTime);
+			}
+			if (this.id === 'pad10') {
+				bufferNode10.stop(context.currentTime);
+			}
+			if (this.id === 'pad11') {
+				bufferNode11.stop(context.currentTime);
+			}
+			if (this.id === 'pad12') {
+				bufferNode12.stop(context.currentTime);
+			}
+			if (this.id === 'pad13') {
+				bufferNode13.stop(context.currentTime);
+			}
+			if (this.id === 'pad14') {
+				bufferNode14.stop(context.currentTime);
+			}
+			if (this.id === 'pad15') {
+				bufferNode15.stop(context.currentTime);
+			}
+			if (this.id === 'pad16') {
+				bufferNode16.stop(context.currentTime);
+			}
+
+		})
+	}
+
+	// function clickedPad() {
+	// 	playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`)
+	// }
+
+	// for(let i=1; i<17; i++) {
+	// 	document.getElementById(`pad${i}`).addEventListener('click', clickedPad, true)
+	// }
+
+	// for(let i=1; i<17; i++) {
+	// 	document.getElementById(`pad${i}`).removeEventListener('click', clickedPad, true)
+	// }
+
+
+
+
+
+
 
 	let setTempo = document.getElementById("set-tempo");
 
@@ -811,7 +897,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 			if (counter === 0 || noteRepeatSwitcher === "on") {
-		
+
 				playSound1(bufferNodeName, soundFile, interval);
 				addBackground(pad);
 				setTimeout(removeBackground, 3, pad);
@@ -872,11 +958,11 @@ function onMIDImessage(messageData) {
 					window[nameBufferNode].buffer = buffer;
 					window[nameBufferNode].connect(gainNode);
 
-					if (noteRepeatSwitcher==="on") {
+					if (noteRepeatSwitcher === "on") {
 						window[nameBufferNode].loop = true;
 						window[nameBufferNode].loopEnd = interval;
 					}
-					
+
 					gainNode.connect(context.destination);
 					gainNode.gain.setValueAtTime(note.velocity / 127, context.currentTime);
 				},
@@ -889,9 +975,9 @@ function onMIDImessage(messageData) {
 
 	function stopSound1(nameBufferNode, delay) {
 		window[nameBufferNode].stop(context.currentTime + delay);
-    };
-    
-    function playAndStop1(bufferNodeName, soundFile, pad, delay) {
+	};
+
+	function playAndStop1(bufferNodeName, soundFile, pad, delay) {
 		let interval = beatRepeat();
 
 		if (switcher === "off") {
