@@ -483,8 +483,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 		for(let i=1; i<17; i++) {
-
-			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`)
+			console.log("ndeindi")
+			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 0)
 		}
 	
 	}
@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		for(let i=1; i<17; i++) {
 
-			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`)
+			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 0)
 		}
 	}
 
@@ -525,10 +525,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	for(let i=1; i<17; i++) {
 
-		playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`)
+		playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 0)
 	}
 
-	function playSound1(nameBufferNode, soundFile, interval) {
+	function playSound1(nameBufferNode, soundFile, interval, gain) {
 
 
 
@@ -549,7 +549,7 @@ document.addEventListener("DOMContentLoaded", function () {
 					}
 
 					gainNode.connect(context.destination);
-					gainNode.gain.setValueAtTime(1, context.currentTime);
+					gainNode.gain.setValueAtTime(gain, context.currentTime);
 				},
 				function (e) { console.log("Error with decoding audio data" + e.err); }
 			);
@@ -562,18 +562,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		window[nameBufferNode].stop(context.currentTime);
 	};
 
-	function clicker() {
-		console.log("clicked!")
-	};
-
-	// for(let i=1; i<17; i++) {
-	// 	// gainNode.gain.setValueAtTime(0, context.currentTime);
-	// 	// document.getElementById(`pad${i}`).addEventListener('click', clickPad(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`));
-	// 	console.log(bufferNode1)
-	// }
 
 	for (let i = 1; i < 17; i++) {
-		document.getElementById(`pad${i}`).addEventListener('mousedown', function () { playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`) }, true);
+		document.getElementById(`pad${i}`).addEventListener('mousedown', function () { playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 1) }, true);
 	}
 
 	for (let i = 1; i < 17; i++) {
@@ -630,24 +621,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		})
 	}
 
-	// function clickedPad() {
-	// 	playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`)
-	// }
-
-	// for(let i=1; i<17; i++) {
-	// 	document.getElementById(`pad${i}`).addEventListener('click', clickedPad, true)
-	// }
-
-	// for(let i=1; i<17; i++) {
-	// 	document.getElementById(`pad${i}`).removeEventListener('click', clickedPad, true)
-	// }
-
-
-
-
-
-
-
 	let setTempo = document.getElementById("set-tempo");
 
 	function keyzDown(event) {
@@ -656,67 +629,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		if (event.keyCode != 8) {
 			if ((event.keyCode === soundObject.pad1.key) && (repeatPad1 < 1) && switcher === "off") {
-				playAndStop1('bufferNode1', soundObject.pad1.sound, 'pad1')
+				playAndStop1('bufferNode1', soundObject.pad1.sound, 'pad1', 1)
 				repeatPad1++
 			}
 			if (event.keyCode === soundObject.pad2.key && (repeatPad2 < 1) && switcher === "off") {
-				playAndStop1('bufferNode2', soundObject.pad2.sound, 'pad2')
+				playAndStop1('bufferNode2', soundObject.pad2.sound, 'pad2', 1)
 				repeatPad2++
 			}
 			if (event.keyCode === soundObject.pad3.key && (repeatPad3 < 1) && switcher === "off") {
-				playAndStop1('bufferNode3', soundObject.pad3.sound, 'pad3')
+				playAndStop1('bufferNode3', soundObject.pad3.sound, 'pad3', 1)
 				repeatPad3++
 			}
 			if (event.keyCode === soundObject.pad4.key && (repeatPad4 < 1) && switcher === "off") {
-				playAndStop1('bufferNode4', soundObject.pad4.sound, 'pad4')
+				playAndStop1('bufferNode4', soundObject.pad4.sound, 'pad4', 1)
 				repeatPad4++
 			}
 			if (event.keyCode === soundObject.pad5.key && (repeatPad5 < 1) && switcher === "off") {
-				playAndStop1('bufferNode5', soundObject.pad5.sound, 'pad5')
+				playAndStop1('bufferNode5', soundObject.pad5.sound, 'pad5', 1)
 				repeatPad5++
 			}
 			if (event.keyCode === soundObject.pad6.key && (repeatPad6 < 1) && switcher === "off") {
-				playAndStop1('bufferNode6', soundObject.pad6.sound, 'pad6')
+				playAndStop1('bufferNode6', soundObject.pad6.sound, 'pad6', 1)
 				repeatPad6++
 			}
 			if (event.keyCode === soundObject.pad7.key && (repeatPad7 < 1) && switcher === "off") {
-				playAndStop1('bufferNode7', soundObject.pad7.sound, 'pad7')
+				playAndStop1('bufferNode7', soundObject.pad7.sound, 'pad7', 1)
 				repeatPad7++
 			}
 			if (event.keyCode === soundObject.pad8.key && (repeatPad8 < 1) && switcher === "off") {
-				playAndStop1('bufferNode8', soundObject.pad8.sound, 'pad8')
+				playAndStop1('bufferNode8', soundObject.pad8.sound, 'pad8', 1)
 				repeatPad8++
 			}
 			if (event.keyCode === soundObject.pad9.key && (repeatPad9 < 1) && switcher === "off") {
-				playAndStop1('bufferNode9', soundObject.pad9.sound, 'pad9')
+				playAndStop1('bufferNode9', soundObject.pad9.sound, 'pad9', 1)
 				repeatPad9++
 			}
 			if (event.keyCode === soundObject.pad10.key && (repeatPad10 < 1) && switcher === "off") {
-				playAndStop1('bufferNode10', soundObject.pad10.sound, 'pad10')
+				playAndStop1('bufferNode10', soundObject.pad10.sound, 'pad10', 1)
 				repeatPad10++
 			}
 			if (event.keyCode === soundObject.pad11.key && (repeatPad11 < 1) && switcher === "off") {
-				playAndStop1('bufferNode11', soundObject.pad11.sound, 'pad11')
+				playAndStop1('bufferNode11', soundObject.pad11.sound, 'pad11', 1)
 				repeatPad11++
 			}
 			if (event.keyCode === soundObject.pad12.key && (repeatPad12 < 1) && switcher === "off") {
-				playAndStop1('bufferNode12', soundObject.pad12.sound, 'pad12')
+				playAndStop1('bufferNode12', soundObject.pad12.sound, 'pad12', 1)
 				repeatPad12++
 			}
 			if (event.keyCode === soundObject.pad13.key && (repeatPad13 < 1) && switcher === "off") {
-				playAndStop1('bufferNode13', soundObject.pad13.sound, 'pad13')
+				playAndStop1('bufferNode13', soundObject.pad13.sound, 'pad13', 1)
 				repeatPad13++
 			}
 			if (event.keyCode === soundObject.pad14.key && (repeatPad14 < 1) && switcher === "off") {
-				playAndStop1('bufferNode14', soundObject.pad14.sound, 'pad14')
+				playAndStop1('bufferNode14', soundObject.pad14.sound, 'pad14', 1)
 				repeatPad14++
 			}
 			if (event.keyCode === soundObject.pad15.key && (repeatPad15 < 1) && switcher === "off") {
-				playAndStop1('bufferNode15', soundObject.pad15.sound, 'pad15')
+				playAndStop1('bufferNode15', soundObject.pad15.sound, 'pad15', 1)
 				repeatPad15++
 			}
 			if (event.keyCode === soundObject.pad16.key && (repeatPad16 < 1) && switcher === "off") {
-				playAndStop1('bufferNode16', soundObject.pad16.sound, 'pad16')
+				playAndStop1('bufferNode16', soundObject.pad16.sound, 'pad16', 1)
 				repeatPad16++
 			}
 
@@ -841,7 +814,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener("keydown", keyzDown);
 	});
 
-	function playAndStop1(bufferNodeName, soundFile, pad) {
+	function playAndStop1(bufferNodeName, soundFile, pad, gain) {
 		let interval = beatRepeat();
 
 		if (switcher === "off") {
@@ -917,14 +890,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 			if (counter === 0 || noteRepeatSwitcher === "on") {
 
-				playSound1(bufferNodeName, soundFile, interval);
+				playSound1(bufferNodeName, soundFile, interval, gain);
 				addBackground(pad);
 				setTimeout(removeBackground, 3, pad);
 
 			}
 			else {
 				stopSound1(bufferNodeName);
-				playSound1(bufferNodeName, soundFile, interval);
+				playSound1(bufferNodeName, soundFile, interval, 1);
 				addBackground(pad);
 				setTimeout(removeBackground, 3, pad);
 
