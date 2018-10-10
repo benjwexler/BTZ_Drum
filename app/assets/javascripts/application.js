@@ -190,58 +190,12 @@ let vidSource = document.getElementById("youtubeVid")
 let soundcloudLink = document.getElementById("soundcloudIcon")
 let changeKitCounter = 0;
 
-function changeKits() {
-	if (changeKitCounter === 0) {
-		changeKitCounter++
-		soundObject = allKits[changeKitCounter][0];
-		producerName.innerText = allKits[changeKitCounter][1]
-		youtubeVid.src = allKits[changeKitCounter][2]
-		soundcloudLink.href = allKits[changeKitCounter][3]
-	}
-	else {
-		changeKitCounter++;
-		if (changeKitCounter === allKits.length) {
-			changeKitCounter = 0;
-		}
-		soundObject = allKits[changeKitCounter][0];
-		producerName.innerText = allKits[changeKitCounter][1]
-		youtubeVid.src = allKits[changeKitCounter][2]
-		soundcloudLink.href = allKits[changeKitCounter][3]
-	}
 
-}
-
-function previousKits() {
-	if (changeKitCounter === 0) {
-		changeKitCounter = allKits.length - 1
-		soundObject = allKits[changeKitCounter][0];
-		producerName.innerText = allKits[changeKitCounter][1]
-		youtubeVid.src = allKits[changeKitCounter][2]
-		soundcloudLink.href = allKits[changeKitCounter][3]
-	} else {
-
-		changeKitCounter--
-		soundObject = allKits[changeKitCounter][0];
-		producerName.innerText = allKits[changeKitCounter][1]
-		youtubeVid.src = allKits[changeKitCounter][2]
-		soundcloudLink.href = allKits[changeKitCounter][3]
-	}
-
-	if (changeKitCounter === allKits.length) {
-		changeKitCounter--
-	}
-}
 
 previousKit = document.getElementById("previousKit");
 changeKit = document.getElementById("changeKit");
 
-changeKit.addEventListener("click", function (event) {
-	changeKits();
-});
 
-previousKit.addEventListener("click", function (event) {
-	previousKits();
-});
 
 let mappedPad = "";
 let mappedKey = "";
@@ -501,12 +455,77 @@ var context = new window.AudioContext;
 document.addEventListener("DOMContentLoaded", function () {
 	console.log("DOMContentLoaded")
 
+	changeKit.addEventListener("click", function (event) {
+		changeKits();
+	});
+	
+	previousKit.addEventListener("click", function (event) {
+		previousKits();
+	});
+
+	function changeKits() {
+		if (changeKitCounter === 0) {
+			changeKitCounter++
+			soundObject = allKits[changeKitCounter][0];
+			producerName.innerText = allKits[changeKitCounter][1]
+			youtubeVid.src = allKits[changeKitCounter][2]
+			soundcloudLink.href = allKits[changeKitCounter][3]
+		}
+		else {
+			changeKitCounter++;
+			if (changeKitCounter === allKits.length) {
+				changeKitCounter = 0;
+			}
+			soundObject = allKits[changeKitCounter][0];
+			producerName.innerText = allKits[changeKitCounter][1]
+			youtubeVid.src = allKits[changeKitCounter][2]
+			soundcloudLink.href = allKits[changeKitCounter][3]
+		}
+
+		for(let i=1; i<17; i++) {
+
+			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`)
+		}
+	
+	}
+	
+	function previousKits() {
+		if (changeKitCounter === 0) {
+			changeKitCounter = allKits.length - 1
+			soundObject = allKits[changeKitCounter][0];
+			producerName.innerText = allKits[changeKitCounter][1]
+			youtubeVid.src = allKits[changeKitCounter][2]
+			soundcloudLink.href = allKits[changeKitCounter][3]
+		} else {
+	
+			changeKitCounter--
+			soundObject = allKits[changeKitCounter][0];
+			producerName.innerText = allKits[changeKitCounter][1]
+			youtubeVid.src = allKits[changeKitCounter][2]
+			soundcloudLink.href = allKits[changeKitCounter][3]
+		}
+	
+		if (changeKitCounter === allKits.length) {
+			changeKitCounter--
+		}
+
+		for(let i=1; i<17; i++) {
+
+			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`)
+		}
+	}
+
 	var gainNode = context.createGain();
 	function beatRepeat() {
 		tempo2 = document.getElementById("set-tempo").value;
 		noteDivision2 = tempoVal;
 		let interval = 1 / ((tempo2 / 60) * noteDivision2 / 4)
 		return interval
+	}
+
+	for(let i=1; i<17; i++) {
+
+		playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`)
 	}
 
 	function playSound1(nameBufferNode, soundFile, interval) {
