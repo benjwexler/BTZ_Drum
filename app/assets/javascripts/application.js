@@ -483,7 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 
 		for(let i=1; i<17; i++) {
-			console.log("ndeindi")
+
 			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 0)
 		}
 	
@@ -897,7 +897,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			}
 			else {
 				stopSound1(bufferNodeName);
-				playSound1(bufferNodeName, soundFile, interval, 1);
+				playSound1(bufferNodeName, soundFile, interval, gain);
 				addBackground(pad);
 				setTimeout(removeBackground, 3, pad);
 
