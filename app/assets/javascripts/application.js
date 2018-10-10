@@ -458,7 +458,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	changeKit.addEventListener("click", function (event) {
 		changeKits();
 	});
-	
+
 	previousKit.addEventListener("click", function (event) {
 		previousKits();
 	});
@@ -482,13 +482,13 @@ document.addEventListener("DOMContentLoaded", function () {
 			soundcloudLink.href = allKits[changeKitCounter][3]
 		}
 
-		for(let i=1; i<17; i++) {
+		for (let i = 1; i < 17; i++) {
 
 			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 0)
 		}
-	
+
 	}
-	
+
 	function previousKits() {
 		if (changeKitCounter === 0) {
 			changeKitCounter = allKits.length - 1
@@ -497,19 +497,19 @@ document.addEventListener("DOMContentLoaded", function () {
 			youtubeVid.src = allKits[changeKitCounter][2]
 			soundcloudLink.href = allKits[changeKitCounter][3]
 		} else {
-	
+
 			changeKitCounter--
 			soundObject = allKits[changeKitCounter][0];
 			producerName.innerText = allKits[changeKitCounter][1]
 			youtubeVid.src = allKits[changeKitCounter][2]
 			soundcloudLink.href = allKits[changeKitCounter][3]
 		}
-	
+
 		if (changeKitCounter === allKits.length) {
 			changeKitCounter--
 		}
 
-		for(let i=1; i<17; i++) {
+		for (let i = 1; i < 17; i++) {
 
 			playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 0)
 		}
@@ -523,7 +523,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		return interval
 	}
 
-	for(let i=1; i<17; i++) {
+	for (let i = 1; i < 17; i++) {
 
 		playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 0)
 	}
@@ -564,7 +564,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 	for (let i = 1; i < 17; i++) {
-		document.getElementById(`pad${i}`).addEventListener('mousedown', function () { playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 1) }, true);
+		document.getElementById(`pad${i}`).addEventListener('mousedown', function () { playAndStop1(`bufferNode${i}`, soundObject[`pad${i}`].sound, `pad${i}`, 1, "yes") }, true);
 	}
 
 	for (let i = 1; i < 17; i++) {
@@ -629,67 +629,67 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		if (event.keyCode != 8) {
 			if ((event.keyCode === soundObject.pad1.key) && (repeatPad1 < 1) && switcher === "off") {
-				playAndStop1('bufferNode1', soundObject.pad1.sound, 'pad1', 1)
+				playAndStop1('bufferNode1', soundObject.pad1.sound, 'pad1', 1, "yes")
 				repeatPad1++
 			}
 			if (event.keyCode === soundObject.pad2.key && (repeatPad2 < 1) && switcher === "off") {
-				playAndStop1('bufferNode2', soundObject.pad2.sound, 'pad2', 1)
+				playAndStop1('bufferNode2', soundObject.pad2.sound, 'pad2', 1, "yes")
 				repeatPad2++
 			}
 			if (event.keyCode === soundObject.pad3.key && (repeatPad3 < 1) && switcher === "off") {
-				playAndStop1('bufferNode3', soundObject.pad3.sound, 'pad3', 1)
+				playAndStop1('bufferNode3', soundObject.pad3.sound, 'pad3', 1, "yes")
 				repeatPad3++
 			}
 			if (event.keyCode === soundObject.pad4.key && (repeatPad4 < 1) && switcher === "off") {
-				playAndStop1('bufferNode4', soundObject.pad4.sound, 'pad4', 1)
+				playAndStop1('bufferNode4', soundObject.pad4.sound, 'pad4', 1, "yes")
 				repeatPad4++
 			}
 			if (event.keyCode === soundObject.pad5.key && (repeatPad5 < 1) && switcher === "off") {
-				playAndStop1('bufferNode5', soundObject.pad5.sound, 'pad5', 1)
+				playAndStop1('bufferNode5', soundObject.pad5.sound, 'pad5', 1, "yes")
 				repeatPad5++
 			}
 			if (event.keyCode === soundObject.pad6.key && (repeatPad6 < 1) && switcher === "off") {
-				playAndStop1('bufferNode6', soundObject.pad6.sound, 'pad6', 1)
+				playAndStop1('bufferNode6', soundObject.pad6.sound, 'pad6', 1, "yes")
 				repeatPad6++
 			}
 			if (event.keyCode === soundObject.pad7.key && (repeatPad7 < 1) && switcher === "off") {
-				playAndStop1('bufferNode7', soundObject.pad7.sound, 'pad7', 1)
+				playAndStop1('bufferNode7', soundObject.pad7.sound, 'pad7', 1, "yes")
 				repeatPad7++
 			}
 			if (event.keyCode === soundObject.pad8.key && (repeatPad8 < 1) && switcher === "off") {
-				playAndStop1('bufferNode8', soundObject.pad8.sound, 'pad8', 1)
+				playAndStop1('bufferNode8', soundObject.pad8.sound, 'pad8', 1, "yes")
 				repeatPad8++
 			}
 			if (event.keyCode === soundObject.pad9.key && (repeatPad9 < 1) && switcher === "off") {
-				playAndStop1('bufferNode9', soundObject.pad9.sound, 'pad9', 1)
+				playAndStop1('bufferNode9', soundObject.pad9.sound, 'pad9', 1, "yes")
 				repeatPad9++
 			}
 			if (event.keyCode === soundObject.pad10.key && (repeatPad10 < 1) && switcher === "off") {
-				playAndStop1('bufferNode10', soundObject.pad10.sound, 'pad10', 1)
+				playAndStop1('bufferNode10', soundObject.pad10.sound, 'pad10', 1, "yes")
 				repeatPad10++
 			}
 			if (event.keyCode === soundObject.pad11.key && (repeatPad11 < 1) && switcher === "off") {
-				playAndStop1('bufferNode11', soundObject.pad11.sound, 'pad11', 1)
+				playAndStop1('bufferNode11', soundObject.pad11.sound, 'pad11', 1, "yes")
 				repeatPad11++
 			}
 			if (event.keyCode === soundObject.pad12.key && (repeatPad12 < 1) && switcher === "off") {
-				playAndStop1('bufferNode12', soundObject.pad12.sound, 'pad12', 1)
+				playAndStop1('bufferNode12', soundObject.pad12.sound, 'pad12', 1, "yes")
 				repeatPad12++
 			}
 			if (event.keyCode === soundObject.pad13.key && (repeatPad13 < 1) && switcher === "off") {
-				playAndStop1('bufferNode13', soundObject.pad13.sound, 'pad13', 1)
+				playAndStop1('bufferNode13', soundObject.pad13.sound, 'pad13', 1, "yes")
 				repeatPad13++
 			}
 			if (event.keyCode === soundObject.pad14.key && (repeatPad14 < 1) && switcher === "off") {
-				playAndStop1('bufferNode14', soundObject.pad14.sound, 'pad14', 1)
+				playAndStop1('bufferNode14', soundObject.pad14.sound, 'pad14', 1, "yes")
 				repeatPad14++
 			}
 			if (event.keyCode === soundObject.pad15.key && (repeatPad15 < 1) && switcher === "off") {
-				playAndStop1('bufferNode15', soundObject.pad15.sound, 'pad15', 1)
+				playAndStop1('bufferNode15', soundObject.pad15.sound, 'pad15', 1, "yes")
 				repeatPad15++
 			}
 			if (event.keyCode === soundObject.pad16.key && (repeatPad16 < 1) && switcher === "off") {
-				playAndStop1('bufferNode16', soundObject.pad16.sound, 'pad16', 1)
+				playAndStop1('bufferNode16', soundObject.pad16.sound, 'pad16', 1, "yes")
 				repeatPad16++
 			}
 
@@ -814,7 +814,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		window.addEventListener("keydown", keyzDown);
 	});
 
-	function playAndStop1(bufferNodeName, soundFile, pad, gain) {
+	function playAndStop1(bufferNodeName, soundFile, pad, gain, backgroundChange) {
 		let interval = beatRepeat();
 
 		if (switcher === "off") {
@@ -891,15 +891,19 @@ document.addEventListener("DOMContentLoaded", function () {
 			if (counter === 0 || noteRepeatSwitcher === "on") {
 
 				playSound1(bufferNodeName, soundFile, interval, gain);
-				addBackground(pad);
-				setTimeout(removeBackground, 3, pad);
 
+				if (backgroundChange === "yes") {
+					addBackground(pad);
+					setTimeout(removeBackground, 3, pad);
+				}
 			}
 			else {
 				stopSound1(bufferNodeName);
 				playSound1(bufferNodeName, soundFile, interval, gain);
-				addBackground(pad);
-				setTimeout(removeBackground, 3, pad);
+				if (backgroundChange === "yes") {
+					addBackground(pad);
+					setTimeout(removeBackground, 3, pad);
+				}
 
 			}
 		}
