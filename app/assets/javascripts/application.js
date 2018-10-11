@@ -464,6 +464,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	function changeKits() {
+
+		noteRepeatSwitcher = "on"
+
+		beatRepeatToggle()
+
 		if (changeKitCounter === 0) {
 			changeKitCounter++
 			soundObject = allKits[changeKitCounter][0];
@@ -490,6 +495,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	function previousKits() {
+
+		noteRepeatSwitcher = "on"
+
+		beatRepeatToggle()
+
 		if (changeKitCounter === 0) {
 			changeKitCounter = allKits.length - 1
 			soundObject = allKits[changeKitCounter][0];
