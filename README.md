@@ -1,24 +1,15 @@
-# README
+<img src="btzDrumPic.png">
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+B*T*Z Drum is a virtual drum machine with sounds from hip-hop's biggest producers
 
-Things you may want to cover:
+<h3> Features: </h3>
+<li> Note Repeat </li>
+<li> Midi Support </li>
+<li> Custom Key Mapping </li>
+<li> Multiple Kits </li>
 
-* Ruby version
+<h3> Built with: </h3>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<li> Javascript </li>
+<li> Web Audio API </li>
+<li> Bootstrap </li>
