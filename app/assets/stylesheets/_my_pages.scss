@@ -437,32 +437,32 @@ iframe {
 
 .padsRow1 {
     border: 5px solid purple;  
-    box-shadow: 5px 7px black;
     border-radius: 10%;
     border-top-right-radius: 15%;
-    // border-top-left-radius: 7%;
-    border-bottom-right-radius: 10%;
     box-shadow: 1px 1px rgb(28, 139, 125);
-    
-    // box-shadow: 1px 1px #00d7d7;
 }
 .padsRow2 {
     border: 5px solid green; 
     box-shadow: 5px 7px black;
-    box-shadow: 1px 1px rgb(28, 139, 125);
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.582);
     border-radius: 3%; 
+    border-radius: 10%;
+    border-top-right-radius: 15%;
 }
 
 .padsRow3 {
     border: 5px solid rgb(12, 102, 199);
+    border-radius: 10%;
+    border-top-right-radius: 15%;
     box-shadow: 1px 1px rgb(28, 139, 125);
-    border-radius: 3%;
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.418);
 }
 
 .padsRow4 {
     border: 5px solid rgba(201, 48, 48, 0.611);
+    border-radius: 10%;
+    border-top-right-radius: 15%;
     box-shadow: 1px 1px rgb(28, 139, 125);
-    border-radius: 3%;
 }
 
 .topLeftDivider {
