@@ -200,13 +200,53 @@ changeKit = document.getElementById("changeKit");
 let mappedPad = "";
 let mappedKey = "";
 let keyAssign = document.getElementById("keyAssign");
+let keyMapHelp = document.getElementById("keyMapHelp")
 let beatRepeatBtn = document.getElementById("beatRepeat");
 let switcher = "off";
 let noteRepeatSwitcher = "off";
 let hiddenButton = document.getElementsByClassName("hiddenButton");
 var pads = document.getElementsByClassName("pads");
 
+let bigKnob = document.getElementById("bigKnob")
+let faqText = document.getElementById("faqText")
+let iFrame = document.querySelector("iframe")
+let questionsContainer = document.getElementById("questionsContainer")
+let knob5Container = document.getElementById("knob5Container")
+let exitFaq = document.getElementById("exitFaq");
+
+let mouseover = false;
+
+function faqTextHover() {
+	if (mouseover === false) {
+		faqText.innerText = "FAQ"
+		mouseover = true
+	} else {
+		faqText.innerText = ""
+		mouseover = false
+	}
+}
+
+knob5Container.addEventListener("mouseover", faqTextHover);
+knob5Container.addEventListener("mouseout", faqTextHover);
+
+function displayHelpScreen() {
+	iFrame.style.display = "none";
+	questionsContainer.style.display = "block"
+}
+
+function displayVideo() {
+	iFrame.style.display = "block";
+	questionsContainer.style.display = "none"
+}
+
+
+
+bigKnob.addEventListener("click", displayHelpScreen);
+exitFaq.addEventListener("click", displayVideo);
+
+
 keyAssign.addEventListener("click", keyToggle);
+// keyMapHelp.addEventListener("click", keyToggle);
 
 let tempoForm = document.getElementById("set-tempo");
 
